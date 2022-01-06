@@ -24,14 +24,15 @@
               Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
       </div>
     </div>
+
     
     <div class="mainContent">
-    <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar) -->
+     <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
-      <!-- Cabeçalho do App -->
+      <!-- Cabeçalho do App-->
         <div class="searchBar">Search</div> 
         <div class="user">
-          <div class="notificationBell"> Sino</div> 
+          <div class="notificationBell">Sino</div> 
           <div class="userIcon">Ícone do Usuário/Mesa</div>
         </div>
       </div>
@@ -58,16 +59,17 @@
       <!-- O Cardápio com as Opções-->
           <div class="dishes">
           <!-- Modelo do Card de um Prato-->
-          <div class="dishName">Pizza de Pepperoni</div>
-          <div class="dishImages">
-            <p>Imagens do Prato</p>
-          </div>
-          <div class="dishIngredients">
-            <p>Ingredientes (Resumo do Prato)</p>
-          </div>
-          <div class="menuBottom">
-            <div class="priceTag"><p>Preço</p></div>
-            <div class="toggleToChart"><p>Opção de Botar na Cesta</p></div>
+            <div class="dishName">Pizza de Pepperoni</div>
+            <div class="dishImages">
+              <p>Imagens do Prato</p>
+            </div>
+            <div class="dishIngredients">
+              <p>Ingredientes (Resumo do Prato)</p>
+            </div>
+            <div class="menuBottom">
+              <div class="priceTag"><p>Preço</p></div>
+              <div class="toggleToChart"><p>Opção de Botar na Cesta</p></div>
+            </div>
           </div>
 
          <div class="dishes">
@@ -82,8 +84,9 @@
             <div class="priceTag"><p>Preço</p></div>
             <div class="toggleToChart"><p>Opção de Botar na Cesta</p></div>
           </div>
+         </div>
 
-           <div class="dishes">
+        <div class="dishes">
           <div class="dishName">Strogonoff de Carne</div>
           <div class="dishImages">
             <p>Imagens do Prato</p>
@@ -109,5 +112,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>
