@@ -12,8 +12,8 @@
         <p>Os Mais Pedidos</p>
         <p>Promoções</p>
         <p>Bebidas</p>
-        <p>História do Restaurante</p>
         <p>Redes Sociais</p>
+        <p>Sobre</p>
         <p>Configurações</p>
       </div>
       <div class="navBarUser">
@@ -26,14 +26,14 @@
     </div>
 
     
-    <div class="mainContent">
+    <div class="mainContainer">
      <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
       <!-- Cabeçalho do App-->
         <div class="searchBar">Search</div> 
         <div class="user">
           <div class="notificationBell">Sino</div> 
-          <div class="userIcon">Ícone do Usuário/Mesa</div>
+          <div class="userIcon">Ícone do User</div>
         </div>
       </div>
       
@@ -66,9 +66,9 @@
             <div class="dishIngredients">
               <p>Ingredientes (Resumo do Prato)</p>
             </div>
-            <div class="menuBottom">
+            <div class="dishBottom">
               <div class="priceTag"><p>Preço</p></div>
-              <div class="toggleToChart"><p>Opção de Botar na Cesta</p></div>
+              <div class="toggleToChart"><p>Opção - Cesta</p></div>
             </div>
           </div>
 
@@ -80,9 +80,9 @@
           <div class="dishIngredients">
             <p>Ingredientes (Resumo do Prato)</p>
           </div>
-          <div class="menuBottom">
+          <div class="dishBottom">
             <div class="priceTag"><p>Preço</p></div>
-            <div class="toggleToChart"><p>Opção de Botar na Cesta</p></div>
+            <div class="toggleToChart"><p>Opção - Cesta</p></div>
           </div>
          </div>
 
@@ -94,11 +94,56 @@
           <div class="dishIngredients">
             <p>Ingredientes (Resumo do Prato)</p>
           </div>
-          <div class="menuBottom">
+          <div class="dishBottom">
             <div class="priceTag"><p>Preço</p></div>
-            <div class="toggleToChart"><p>Opção de Botar na Cesta</p></div>
+            <div class="toggleToChart"><p>Opção - Cesta</p></div>
           </div>
         </div>
+
+        <div class="dishes">
+          <!-- Modelo do Card de um Prato-->
+            <div class="dishName">Bife à Parmegiana com Fritas</div>
+            <div class="dishImages">
+              <p>Imagens do Prato</p>
+            </div>
+            <div class="dishIngredients">
+              <p>Ingredientes (Resumo do Prato)</p>
+            </div>
+            <div class="dishBottom">
+              <div class="priceTag"><p>Preço</p></div>
+              <div class="toggleToChart"><p>Opção - Cesta</p></div>
+            </div>
+          </div>
+
+          <div class="dishes">
+          <!-- Modelo do Card de um Prato-->
+            <div class="dishName">Salada de Frutas</div>
+            <div class="dishImages">
+              <p>Imagens do Prato</p>
+            </div>
+            <div class="dishIngredients">
+              <p>Ingredientes (Resumo do Prato)</p>
+            </div>
+            <div class="dishBottom">
+              <div class="priceTag"><p>Preço</p></div>
+              <div class="toggleToChart"><p>Opção - Cesta</p></div>
+            </div>
+          </div>
+
+          <div class="dishes">
+          <!-- Modelo do Card de um Prato-->
+            <div class="dishName">Caipivodka</div>
+            <div class="dishImages">
+              <p>Imagens do Prato</p>
+            </div>
+            <div class="dishIngredients">
+              <p>Ingredientes (Resumo do Prato)</p>
+            </div>
+            <div class="dishBottom">
+              <div class="priceTag"><p>Preço</p></div>
+              <div class="toggleToChart"><p>Opção - Cesta</p></div>
+            </div>
+          </div>
       </div>
     </div>
   </div>
@@ -110,6 +155,3 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-</style>
