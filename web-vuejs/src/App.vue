@@ -1,14 +1,20 @@
 <template>
-  <Main/>
+  <div class="main">
+    <NavBar/>
+    <Home/>
+  </div>
+  
 </template>
 
 <script>
-import Main from './components/Main.vue'
+import NavBar from "./components/NavBar.vue"
+import Home from './components/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    Main
+    Home,
+    NavBar
   }
 }
 </script>
@@ -33,35 +39,6 @@ export default {
   position: absolute;
   width: 100vw;
   height: 100%;
-}
-
-.navBar{
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  width: 15%;
-  height: 100vh;
-  left:0;
-  background: white;
-  text-align: center;
-  justify-content: space-between;
-}
-
-.bigLogo{
-  margin-top:1rem;
-}
-
-.navBarOptions{
-  display: flex;
-  flex-direction: column;
-  gap:1rem;
-}
-
-.navBarUser{
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  gap:0.5rem;
 }
 
 .mainContainer{

@@ -1,31 +1,6 @@
 <template>
   <div class="bigContainer">
     <!-- Container Geral de Todo Conteúdo-->
-    <div class="navBar">
-      <!-- Nav Bar do App. Fixa à Esquerda-->
-      <div class="bigLogo">Restaurant Logo</div>
-      <div class="navBarOptions">
-        <!-- Opções da Nav Bar-->
-        <p>Home</p>
-        <p>Histórico</p>
-        <p>Cesta </p>
-        <p>Os Mais Pedidos</p>
-        <p>Promoções</p>
-        <p>Bebidas</p>
-        <p>Redes Sociais</p>
-        <p>Sobre</p>
-        <p>Configurações</p>
-      </div>
-      <div class="navBarUser">
-        <!-- Informações do Usuário/Mesa-->
-        <div class="userID">Mesa #X/Usuário X</div>
-        <div class="userStatus">Vazia</div>
-        <!-- Status da Mesa: Vazia, Ocupada, Indisponível.
-              Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
-      </div>
-    </div>
-
-    
     <div class="mainContainer">
      <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
@@ -150,8 +125,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'Main'
+  name: 'Home'
 }
 </script>
 
