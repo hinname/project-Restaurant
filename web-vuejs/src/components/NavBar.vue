@@ -5,12 +5,11 @@
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
                   <p>Home</p>
-                  <p>Histórico</p>
+                  <p>Meus Pedidos</p>
                   <p>Cesta </p>
                   <p>Os Mais Pedidos</p>
                   <p>Promoções</p>
                   <p>Bebidas</p>
-                  <p>Redes Sociais</p>
                   <p>Sobre</p>
                   <p>Configurações</p>
             </div>
@@ -21,6 +20,7 @@
                   <!-- Status da Mesa: Vazia, Ocupada, Indisponível.
                         Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
             </div>
+            <div class="socialMediaLinks"><p>Redes Sociais</p></div>
       </div>
 </template>
 
@@ -44,6 +44,7 @@ export default {
       background: white;
       text-align: center;
       justify-content: space-between;
+      z-index: 10;
 }
 
 .bigLogo{
@@ -57,9 +58,12 @@ export default {
 }
 
 .navBarUser{
-      margin-bottom: 1rem;
       display: flex;
       flex-direction: column;
       gap:0.5rem;
+}
+
+.socialMediaLinks{
+      margin-bottom: 1rem;
 }
 </style>
