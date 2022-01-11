@@ -1,16 +1,16 @@
 <template>
       <div class="container">
-            <h1>Sobre</h1>
+            <h1>Página não encontrada</h1>
       </div>
 </template>
 
 <script>
 export default {
-      name:'About'
+      name:'NotFound'
 }
 </script>
 
-<style>
+<style scoped>
 .container {
       display: flex;
       justify-content: center;

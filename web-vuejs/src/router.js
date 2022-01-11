@@ -1,18 +1,22 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-import Home from './views/Home.vue'
-import About from './views/About.vue'
 
 const routes = [
   {
+    path: '/:pathMatch(.*)*', 
+    name: 'NotFound', 
+    component: () => import(/* webpackChunkName: "NotFound" */'./views/NotFound.vue')
+  },
+
+  {
     path: '/',
     name: 'home',
-    component: Home
+    component: () => import(/* webpackChunkName: "Home" */'./views/Home.vue')
   },
   {
     path: '/about',
     name: 'about',
-    component: About
+    component: () => import(/* webpackChunkName: "About" */'./views/About.vue')
   }
 ]
 

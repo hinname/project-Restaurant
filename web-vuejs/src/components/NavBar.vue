@@ -4,14 +4,17 @@
             <div class="bigLogo">Restaurant Logo</div>
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
-                  <p>Home</p>
-                  <p>Meus Pedidos</p>
-                  <p>Cesta </p>
-                  <p>Os Mais Pedidos</p>
-                  <p>Promoções</p>
-                  <p>Bebidas</p>
-                  <p>Sobre</p>
-                  <p>Configurações</p>
+                  <ul>
+                        <li><RouterLink to="/" exact>Home</RouterLink></li>
+                        <li>Meus pedidos</li>
+                        <li>Cesta</li>
+                        <li>Os mais pedidos</li>
+                        <li>Promoções</li>
+                        <li>Bebidas</li>
+                        <li><RouterLink to="/about">Sobre</RouterLink></li>
+                        <li>Configurações</li>
+                  </ul>
+                  
             </div>
             <div class="navBarUser">
                   <!-- Informações do Usuário/Mesa-->
@@ -51,11 +54,22 @@ export default {
       margin-top:1rem;
 }
 
-.navBarOptions{
+.navBarOptions ul{
       display: flex;
       flex-direction: column;
       gap:1rem;
 }
+
+.navBarOptions .router-link-active {
+      color: rgb(192, 65, 65)
+}
+
+.navBarOptions a {
+      text-decoration: none;
+      color: #000;
+}
+
+
 
 .navBarUser{
       display: flex;
