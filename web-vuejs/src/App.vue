@@ -33,4 +33,13 @@ export default {
   margin: 0;
   padding: 0;
 }
+
+.main {
+
+  overflow-x: hidden;
+  position: absolute;
+  width: 100vw;
+  height: 100%;
+  z-index:1;
+}
 </style>

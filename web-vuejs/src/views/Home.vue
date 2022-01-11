@@ -1,7 +1,6 @@
 <template>
-  <div class="bigContainer">
     <!-- Container Geral de Todo Conteúdo-->
-    <div class="mainContainer">
+    <div class="container">
       <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
       <!-- Cabeçalho do App-->
@@ -40,7 +39,6 @@
 
       </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -58,15 +56,8 @@ export default {
 </script>
 
 <style scoped>
-.bigContainer{
-  overflow-x: hidden;
-  position: absolute;
-  width: 100vw;
-  height: 100%;
-  z-index:1;
-}
 
-.mainContainer{
+.container{
   position: relative;
   width: 85%;
   height: 100%;
