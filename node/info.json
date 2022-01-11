@@ -1,0 +1,45 @@
+[
+    {
+        "id": "1",
+        "nome": "Pizza de Pepperoni",
+        "imagem": "images/pepperoni.jpg",
+        "ingredientes": "Muçarela, Molho de tomate, Pepperoni.",
+        "preco": "R$32,50"
+    },
+    {
+        "id": "2",
+        "nome": "Brownie",
+        "imagem": "images/brownie.jpg",
+        "ingredientes": "Chocolate.",
+        "preco": "R$8,00"
+    },
+    {
+        "id": "3",
+        "nome": "Strogonoff de Carne",
+        "imagem": "images/strogonoff.jpg",
+        "ingredientes": "Arroz, carne e molho.",
+        "preco": "R$42,50"
+    },
+    {
+        "id": "4",
+        "nome": "Bife à Parmegiana com Fritas",
+        "imagem": "images/parmegiana.jpg",
+        "ingredientes": "Bife, Molho, Queijo, Arroz e Fritas.",
+        "preco": "R$52,50"
+    },
+    {
+        "id": "5",
+        "nome": "Salada de Frutas",
+        "imagem": "images/frutas.jpg",
+        "ingredientes": "Frutas diversas, incluso Manga.",
+        "preco": "R$10,00"
+    },
+    {
+        "id": "6",
+        "nome": "Caipivodka",
+        "imagem": "images/caipivodka.jpg",
+        "ingredientes": "Vodka, limão e gelo.",
+        "preco": "R$12,50"
+    }
+
+]
