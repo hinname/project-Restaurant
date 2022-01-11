@@ -2,7 +2,7 @@
   <div class="bigContainer">
     <!-- Container Geral de Todo Conteúdo-->
     <div class="mainContainer">
-     <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
+      <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
       <!-- Cabeçalho do App-->
         <div class="searchBar">Search</div> 
@@ -32,93 +32,12 @@
 
       <div class="menu">
       <!-- O Cardápio com as Opções-->
-          <div class="dishes">
-          <!-- Modelo do Card de um Prato-->
-            <div class="dishName">Pizza de Pepperoni</div>
-            <div class="dishImages">
-              <p>Imagens do Prato</p>
-            </div>
-            <div class="dishIngredients">
-              <p>Ingredientes (Resumo do Prato)</p>
-            </div>
-            <div class="dishBottom">
-              <div class="priceTag"><p>Preço</p></div>
-              <div class="toggleToChart"><p>Opção - Cesta</p></div>
-            </div>
-          </div>
 
-         <div class="dishes">
-          <div class="dishName">Brownie</div>
-          <div class="dishImages">
-            <p>Imagens do Prato</p>
-          </div>
-          <div class="dishIngredients">
-            <p>Ingredientes (Resumo do Prato)</p>
-          </div>
-          <div class="dishBottom">
-            <div class="priceTag"><p>Preço</p></div>
-            <div class="toggleToChart"><p>Opção - Cesta</p></div>
-          </div>
-         </div>
+        <Dish/>
+        <Dish/>
+        <Dish/>
+        <Dish/>
 
-        <div class="dishes">
-          <div class="dishName">Strogonoff de Carne</div>
-          <div class="dishImages">
-            <p>Imagens do Prato</p>
-          </div>
-          <div class="dishIngredients">
-            <p>Ingredientes (Resumo do Prato)</p>
-          </div>
-          <div class="dishBottom">
-            <div class="priceTag"><p>Preço</p></div>
-            <div class="toggleToChart"><p>Opção - Cesta</p></div>
-          </div>
-        </div>
-
-        <div class="dishes">
-          <!-- Modelo do Card de um Prato-->
-            <div class="dishName">Bife à Parmegiana com Fritas</div>
-            <div class="dishImages">
-              <p>Imagens do Prato</p>
-            </div>
-            <div class="dishIngredients">
-              <p>Ingredientes (Resumo do Prato)</p>
-            </div>
-            <div class="dishBottom">
-              <div class="priceTag"><p>Preço</p></div>
-              <div class="toggleToChart"><p>Opção - Cesta</p></div>
-            </div>
-          </div>
-
-          <div class="dishes">
-          <!-- Modelo do Card de um Prato-->
-            <div class="dishName">Salada de Frutas</div>
-            <div class="dishImages">
-              <p>Imagens do Prato</p>
-            </div>
-            <div class="dishIngredients">
-              <p>Ingredientes (Resumo do Prato)</p>
-            </div>
-            <div class="dishBottom">
-              <div class="priceTag"><p>Preço</p></div>
-              <div class="toggleToChart"><p>Opção - Cesta</p></div>
-            </div>
-          </div>
-
-          <div class="dishes">
-          <!-- Modelo do Card de um Prato-->
-            <div class="dishName">Caipivodka</div>
-            <div class="dishImages">
-              <p>Imagens do Prato</p>
-            </div>
-            <div class="dishIngredients">
-              <p>Ingredientes (Resumo do Prato)</p>
-            </div>
-            <div class="dishBottom">
-              <div class="priceTag"><p>Preço</p></div>
-              <div class="toggleToChart"><p>Opção - Cesta</p></div>
-            </div>
-          </div>
       </div>
     </div>
   </div>
@@ -126,8 +45,15 @@
 
 <script>
 
+import Dish from "./Dish.vue"
+
+
 export default {
-  name: 'Home'
+  name: 'Home',
+
+  components: {
+    Dish
+  }
 }
 </script>
 

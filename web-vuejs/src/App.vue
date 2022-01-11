@@ -108,23 +108,4 @@ export default {
   gap: 1rem;
 }
 
-.dishes{
-  height: 17.5rem;
-  width:70%;
-  margin: 1.5rem 0 1rem;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.dishName{
-  font-size: 1.15rem;
-  font-weight: bold;
-}
-
-
-.dishBottom{
-  display: flex;
-  justify-content: space-between;
-}
-
 </style>
