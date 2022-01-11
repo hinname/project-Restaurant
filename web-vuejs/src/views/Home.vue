@@ -22,6 +22,7 @@
           <p>Frango</p>
           <p>Veganos</p>
           <p>Vegetarianos</p>
+          <p>Teste</p>
           <p>Fit</p>
           <p>Fritos</p>
           <p>Sucos</p>
