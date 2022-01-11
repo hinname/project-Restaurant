@@ -1,19 +1,17 @@
 <template>
   <div class="main">
     <NavBar/>
-    <Home/>
+    <RouterView></RouterView>
   </div>
   
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue"
-import Home from './views/Home.vue'
 
 export default {
   name: 'App',
   components: {
-    Home,
     NavBar
   }
 }
@@ -27,6 +25,7 @@ export default {
   color: rgb(14, 1, 1);
   margin: 0;
   padding: 0;
+  
 }
 
 *,html,body{
@@ -41,5 +40,7 @@ export default {
   width: 100vw;
   height: 100%;
   z-index:1;
+
+  background: rgb(238, 234, 226);
 }
 </style>

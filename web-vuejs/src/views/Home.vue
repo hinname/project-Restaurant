@@ -65,7 +65,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  background: rgb(238, 234, 226);
+  
 }
 
 .mainContainer *{
