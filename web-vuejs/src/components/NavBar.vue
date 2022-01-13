@@ -5,13 +5,17 @@
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
                   <ul>
-                        <li><RouterLink to="/" exact>Home</RouterLink></li>
+                        <li>
+                              <RouterLink to="/" exact>Home</RouterLink>
+                        </li>
                         <li>Meus pedidos</li>
                         <li>Cesta</li>
                         <li>Os mais pedidos</li>
                         <li>Promoções</li>
                         <li>Bebidas</li>
-                        <li><RouterLink to="/about">Sobre</RouterLink></li>
+                        <li>
+                              <RouterLink to="/about">Sobre</RouterLink>
+                        </li>
                         <li>Configurações</li>
                   </ul>
                   
