@@ -35,7 +35,7 @@ export default {
 <style>
 .dishes{
       display: flex;
-      height: 17.5rem;
+      height: 80%;
       width:70%;
       margin: 1.5rem 0 1rem;
       justify-content: space-between;
@@ -60,6 +60,7 @@ export default {
 
 .dishBottom{
       display: flex;
+      margin-top: 2rem;
       width: 100%;
       justify-content: space-between;
 }
