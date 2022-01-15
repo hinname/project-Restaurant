@@ -16,7 +16,9 @@
                         <li>
                               <RouterLink to="/about">Sobre</RouterLink>
                         </li>
-                        <li>Configurações</li>
+                        <li>
+                              <RouterLink to="/settings">Configurações</RouterLink>
+                        </li>
                   </ul>
                   
             </div>

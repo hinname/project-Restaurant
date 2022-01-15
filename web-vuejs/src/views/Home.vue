@@ -112,17 +112,10 @@ export default {
 .menu{
   position: relative;
   display:grid;
+  height: 100%;
   grid-template-columns: repeat(3, 2fr);
   justify-items: center;
   overflow: scroll;
-}
-
-.menu > div{
-  background: white;
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
 }
 
 </style>

@@ -35,12 +35,16 @@ export default {
 <style>
 .dishes{
       display: flex;
-      height: 80%;
+      background: white;
+      padding: 1.5rem;
+      flex-direction: column;
+      height: 75%;
       width:70%;
-      margin: 1.5rem 0 1rem;
-      justify-content: space-between;
+      margin: 2rem 0 3rem;
       align-items: center;
       text-align: center;
+      gap: 1rem;
+      
 }
 
 .dishName{
