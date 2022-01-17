@@ -46,6 +46,7 @@
 
 import Dish from "../components/Dish.vue"
 
+//Importando instância do axios do api.js
 import api from "../services/api.js"
 
 
@@ -63,9 +64,11 @@ export default {
     }
   },
 
+  //Assim que o componente Home for criado
   created() {
+    //uso do axios com tipo get no /dishes
     api.get('dishes').then(response => {
-      this.dishes = response.data;
+      this.dishes = response.data; //dados de resposta dessa página (json de todos os pratos) são colocados na variável dishes
     })
   }
 }
