@@ -31,7 +31,13 @@
 
       <div class="menu">
       <!-- O Cardápio com as Opções-->
-          <Dish v-for="dish in dishes" :key="dish.id" :name="dish.nome" :image="dish.imagem" :ingredients="dish.ingredientes" :price="dish.preco"/>
+            <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
+          <Dish v-for="dish in dishes" :key="dish.id" 
+            :name="dish.nome" 
+            :image="dish.imagem" 
+            :ingredients="dish.ingredientes" 
+            :price="dish.preco"
+          />
       </div>
     </div>
 </template>
