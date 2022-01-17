@@ -7,6 +7,7 @@ class GetAllDishesController {
     const service = new GetAllDishesService();
 
     const result = await service.execute();
+    res.header("Access-Control-Allow-Origin", "http://localhost:8080");
     return res.json(result)
 
   }

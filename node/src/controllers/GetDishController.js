@@ -11,6 +11,8 @@ class GetDishController {
 
     const service = new GetDishService();
 
+    res.header("Access-Control-Allow-Origin", "http://localhost:8080");
+
     try {
       const result = await service.execute(id);
       return res.json(result)

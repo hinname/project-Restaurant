@@ -17,7 +17,7 @@
           <h3>Filtros</h3> 
         </div> 
         <div class="filterOptions">
-          <p>Sobremesas</p>
+          <p>{{dish.dish}}</p>
           <p>Carne</p>
           <p>Frango</p>
           <p>Veganos</p>
@@ -31,12 +31,7 @@
 
       <div class="menu">
       <!-- O Cardápio com as Opções-->
-
-        <Dish/>
-        <Dish/>
-        <Dish/>
-        <Dish/>
-
+          <Dish v-for="dish in dishes" :key="dish.id" :name="dish.nome" :image="dish.imagem" :ingredients="dish.ingredientes" :price="dish.preco"/>
       </div>
     </div>
 </template>
@@ -45,12 +40,27 @@
 
 import Dish from "../components/Dish.vue"
 
+import api from "../services/api.js"
+
 
 export default {
   name: 'Home',
 
   components: {
     Dish
+  },
+
+  data() {
+    return {
+      dishes: "",
+      dish: "",
+    }
+  },
+
+  created() {
+    api.get('dishes').then(response => {
+      this.dishes = response.data;
+    })
   }
 }
 </script>

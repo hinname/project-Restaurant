@@ -20,13 +20,16 @@
 export default {
       name: 'Dish',
 
+      props: {
+            name: String,
+            image: String,
+            ingredients: String,
+            price: String
+      },
+
       data(){
             return {
-                  name: 'Pizza de Pepperoni',
-                  image: 'http://localhost:3000/images/pepperoni.jpg',
-                  altImag: 'Pizza de Pepperoni',
-                  ingredients: 'Muçarela, Molho de tomate, Pepperoni.',
-                  price: 'R$32,50'
+                  altImag: 'Foto do prato',
             }
       }
 }
@@ -54,11 +57,12 @@ export default {
 
 .dishImages {
       width: 90%;
-      height: 100%;
+      height: auto;
 }
 
 .dishImages img {
       width: 100%;
+      height: 12rem;
 }
 
 

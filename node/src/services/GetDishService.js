@@ -9,7 +9,7 @@ class GetDishService {
       throw new Error("Id inválido");
     }
 
-    return {dish}
+    return dish
 
   }
 }
