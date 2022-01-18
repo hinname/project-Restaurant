@@ -17,7 +17,7 @@
           <h3>Filtros</h3> 
         </div> 
         <div class="filterOptions">
-          <p>{{dish.dish}}</p>
+          <p>Sobremesas</p>
           <p>Carne</p>
           <p>Frango</p>
           <p>Veganos</p>
