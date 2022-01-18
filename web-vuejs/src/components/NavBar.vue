@@ -9,7 +9,9 @@
                               <RouterLink to="/" exact>Home</RouterLink>
                         </li>
                         <li>Meus pedidos</li>
-                        <li>Cesta</li>
+                        <li>
+                              <RouterLink to="/cart">Cesta</RouterLink>
+                        </li>
                         <li>Os mais pedidos</li>
                         <li>Promoções</li>
                         <li>Bebidas</li>
@@ -20,7 +22,7 @@
                               <RouterLink to="/settings">Configurações</RouterLink>
                         </li>
                   </ul>
-                  
+
             </div>
             <div class="navBarUser">
                   <!-- Informações do Usuário/Mesa-->
