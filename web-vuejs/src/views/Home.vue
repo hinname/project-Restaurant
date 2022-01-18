@@ -31,8 +31,12 @@
 
       <div class="menu">
       <!-- O Cardápio com as Opções-->
+        <!-- se a busca falhar ele imprime essa mensagem-->
+        <div class="dishNotFound" v-if="notFoundDishes">
+          <h1>Pratos não encontrados!</h1>
+        </div>
             <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-          <Dish v-for="dish in dishes" :key="dish.id" 
+          <Dish v-else v-for="dish in dishes" :key="dish.id" 
             :name="dish.nome" 
             :image="dish.imagem" 
             :ingredients="dish.ingredientes" 
@@ -61,6 +65,7 @@ export default {
     return {
       dishes: "",
       dish: "",
+      notFoundDishes: false,
     }
   },
 
@@ -69,6 +74,10 @@ export default {
     //uso do axios com tipo get no /dishes
     api.get('dishes').then(response => {
       this.dishes = response.data; //dados de resposta dessa página (json de todos os pratos) são colocados na variável dishes
+    })
+    .catch(err => {
+      console.log(err)
+      this.notFoundDishes = true
     })
   }
 }
@@ -136,5 +145,6 @@ export default {
   justify-items: center;
   overflow: scroll;
 }
+
 
 </style>
