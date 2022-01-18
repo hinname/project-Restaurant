@@ -28,20 +28,23 @@
           <p>Alcoólicos</p>
         </div>
       </div>
-
-      <div class="menu">
-      <!-- O Cardápio com as Opções-->
-        <!-- se a busca falhar ele imprime essa mensagem-->
-        <div class="dishNotFound" v-if="notFoundDishes">
+      
+      <!-- se a busca falhar ele imprime essa mensagem-->
+      <div class="menuAlternative" v-if="notFoundDishes">
+        <div class="dishNotFound" >
           <h1>Pratos não encontrados!</h1>
         </div>
+      </div>
+      <div class="menu" v-else>
+      <!-- O Cardápio com as Opções-->
             <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-          <Dish v-else v-for="dish in dishes" :key="dish.id" 
+          <Dish  v-for="dish in dishes" :key="dish.id" 
             :name="dish.nome" 
             :image="dish.imagem" 
             :ingredients="dish.ingredientes" 
             :price="dish.preco"
           />
+
       </div>
     </div>
 </template>
@@ -137,7 +140,7 @@ export default {
   flex-wrap: wrap;
 }
 
-.menu{
+.menu {
   position: relative;
   display:grid;
   height: 100%;
@@ -146,5 +149,25 @@ export default {
   overflow: scroll;
 }
 
+
+.menuAlternative {
+  height: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+  .menu{
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));;
+  overflow: scroll;
+  justify-items: center;
+  object-fit: cover;
+  
+}
+}
 
 </style>

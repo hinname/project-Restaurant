@@ -42,11 +42,14 @@ export default {
       padding: 1.5rem;
       flex-direction: column;
       height: 75%;
-      width:70%;
+      width: 65%;
       margin: 2rem 0 3rem;
       align-items: center;
       text-align: center;
+      justify-content: space-between;
       gap: 1rem;
+      border-radius: 5px;
+      border: 1px solid rgb(212, 211, 207);
       
 }
 
@@ -57,12 +60,12 @@ export default {
 
 .dishImages {
       width: 90%;
-      height: auto;
 }
 
 .dishImages img {
       width: 100%;
-      height: 12rem;
+      
+      border-radius: 5px;
 }
 
 
@@ -72,4 +75,12 @@ export default {
       width: 100%;
       justify-content: space-between;
 }
+
+@media screen and (max-width: 768px) {
+      .dishes{
+            height: 80%;
+            width: 75%;
+      }
+}
+
 </style>
