@@ -1,5 +1,13 @@
 <template>
-      <h1>Configurações do app</h1>
+     <div class="container">
+            <h1>Configurações do app</h1>
+            <div class="options">
+                  <h3> Modo Dark</h3>
+                  <h3>Temas</h3>
+                  <h3> Idiomas</h3>
+                  <h3> Suporte</h3>
+            </div>
+     </div>
 </template>
 
 <script>
@@ -9,5 +17,21 @@ export default {
 </script>
 
 <style>
+      .container{
+            position: relative;
+            width: 85%;
+            left: 15%;
+            padding: 1rem 2rem 0;
+             
+      }
 
+      .options{
+            display: flex;
+            flex-direction: column;
+            gap: 5rem; 
+            margin: 4rem 2.5rem 0;
+      }
+      h3{
+            color: rgb(29, 28, 28);
+      }
 </style>
