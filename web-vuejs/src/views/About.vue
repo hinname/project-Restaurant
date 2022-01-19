@@ -23,7 +23,7 @@ export default {
       display: flex;
       margin-top: 2rem;
       left: 15%;
-      width: 85%;
+      width: 80%;
       flex-direction: column;
       gap: 3rem;
 }
