@@ -36,8 +36,11 @@ export default {
       methods: {
           CartWrite () {
             const fs = require('fs');
+            //lendo o arquivo cart.json
             fs.readFile('../services/cart.json', (err, data) => {
+              //lendo a informação do arquivo cart.json em um objeto
               const cartProducts = JSON.parse(data);
+              //objeto a ser inserido no json
               const newCartProduct = {
                 id: 1,
                 nome: "Pizza de Pepperoni",
@@ -54,8 +57,10 @@ export default {
                 }
               });
               if (!cartProductExists) {
+                //colocando as informações de newCartProduct no array de cartProducts
                 cartProducts.push(newCartProduct)
               }
+              //escrevendo o resultado no cart.json
               fs.writeFile('../services/cart.json', JSON.stringify(cartProducts))
             });
           }
