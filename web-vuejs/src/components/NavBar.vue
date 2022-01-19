@@ -31,7 +31,11 @@
                   <!-- Status da Mesa: Vazia, Ocupada, Indisponível.
                         Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
             </div>
-            <div class="socialMediaLinks"><p>Redes Sociais</p></div>
+            <div class="socialMediaLinks">
+                  <a href="https://www.facebook.com"><fa :icon="['fab', 'facebook']" /></a>
+                  <a href="https://www.instagram.com"><fa :icon="['fab', 'instagram']" /></a>
+                  
+            </div>
       </div>
 </template>
 
@@ -39,8 +43,10 @@
 
 
 <script>
+
+
 export default {
-      name: 'NavBar'
+      name: 'NavBar',
 }
 </script>
 
@@ -87,5 +93,16 @@ export default {
 
 .socialMediaLinks{
       margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      font-size: 1.75rem;
+
 }
+
+.socialMediaLinks a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #000;
+}
+
 </style>
