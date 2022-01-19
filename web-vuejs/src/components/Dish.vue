@@ -34,31 +34,31 @@ export default {
       },
 
       methods: {
-          CartWrite () {
-            const fs = require('fs');
-            fs.readFile('../services/cart.json', (err, data) => {
-              const cartProducts = JSON.parse(data);
-              const newCartProduct = {
-                id: 1,
-                nome: "Pizza de Pepperoni",
-                imagem: "http://localhost:3000/images/pepperoni.jpg",
-                ingredientes: "Muçarela, Molho de tomate, Pepperoni.",
-                preco: "R$32,50",
-                quantity: 1
-              };
-              let cartProductExists = false;
-              cartProducts.map((cartProduct) => {
-                if (cartProduct.id === newCartProduct.id) {
-                  cartProduct.quantity++;
-                  cartProductExists = true;
-                }
-              });
-              if (!cartProductExists) {
-                cartProducts.push(newCartProduct)
-              }
-              fs.writeFile('../services/cart.json', JSON.stringify(cartProducts))
-            });
-          }
+            CartWrite () {
+                  const fs = require('fs');
+                  fs.readFile('../services/cart.json', (err, data) => {
+                        const cartProducts = JSON.parse(data);
+                        const newCartProduct = {
+                              id: 1,
+                              nome: "Pizza de Pepperoni",
+                              imagem: "http://localhost:3000/images/pepperoni.jpg",
+                              ingredientes: "Muçarela, Molho de tomate, Pepperoni.",
+                              preco: "R$32,50",
+                              quantity: 1
+                        };
+                        let cartProductExists = false;
+                        cartProducts.map((cartProduct) => {
+                              if (cartProduct.id === newCartProduct.id) {
+                                    cartProduct.quantity++;
+                                    cartProductExists = true;
+                              }
+                        });
+                        if (!cartProductExists) {
+                              cartProducts.push(newCartProduct)
+                        }
+                        fs.writeFile('../services/cart.json', JSON.stringify(cartProducts))
+                  });
+            }
       }
 
 }
