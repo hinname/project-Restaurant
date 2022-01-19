@@ -10,7 +10,7 @@
             </div>
             <div class="dishBottom">
                   <div class="priceTag"><p>{{price}}</p></div>
-                  <div class="toggleToChart"><p>Opção - Cesta</p></div>
+                  <div class="toggleToChart"><button @click="CartWrite">Opção - Cesta</button></div>
             </div>
       </div>
 </template>
@@ -31,7 +31,36 @@ export default {
             return {
                   altImag: 'Foto do prato',
             }
+      },
+
+      methods: {
+          CartWrite () {
+            const fs = require('fs');
+            fs.readFile('../services/cart.json', (err, data) => {
+              const cartProducts = JSON.parse(data);
+              const newCartProduct = {
+                id: 1,
+                nome: "Pizza de Pepperoni",
+                imagem: "http://localhost:3000/images/pepperoni.jpg",
+                ingredientes: "Muçarela, Molho de tomate, Pepperoni.",
+                preco: "R$32,50",
+                quantity: 1
+              };
+              let cartProductExists = false;
+              cartProducts.map((cartProduct) => {
+                if (cartProduct.id === newCartProduct.id) {
+                  cartProduct.quantity++;
+                  cartProductExists = true;
+                }
+              });
+              if (!cartProductExists) {
+                cartProducts.push(newCartProduct)
+              }
+              fs.writeFile('../services/cart.json', JSON.stringify(cartProducts))
+            });
+          }
       }
+
 }
 </script>
 
@@ -50,7 +79,7 @@ export default {
       gap: 1rem;
       border-radius: 5px;
       border: 1px solid rgb(212, 211, 207);
-      
+
 }
 
 .dishName{
@@ -64,7 +93,7 @@ export default {
 
 .dishImages img {
       width: 100%;
-      
+
       border-radius: 5px;
 }
 
