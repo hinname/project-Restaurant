@@ -48,7 +48,6 @@ export default {
 
                   let cartProducts = await require('../services/cart.json')
 
-                  
                   let cartProductExists = false;
 
                   cartProducts.map((cartProduct) => {
@@ -65,7 +64,7 @@ export default {
                   console.log(cartProducts)
                   console.log(fs)
 
-                  fs.writeFile('../services/cart.json', JSON.stringify(cartProducts))
+                  localStorage.setItem('Cart', JSON.stringify(cartProducts));
             }
       }
 

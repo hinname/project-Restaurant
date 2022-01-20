@@ -10,7 +10,7 @@
             </div>
             <div class="cartBottom">
                   <div class="priceTag"><p>{{price}}</p></div>
-                  <div class="toggleToChart"><p>Opção - Cesta</p></div>
+                  <div class="toggleToChart"><button @click="CartRead">Opção - Cesta</button></div>
             </div>
       </div>
 </template>
@@ -30,6 +30,14 @@ export default {
       data(){
             return {
                   altImag: 'Foto do prato',
+            }
+      },
+
+      methods: {
+            async CartRead() {
+                  var obj = JSON.parse(localStorage.getItem('Cart'));
+
+                  console.log(obj)
             }
       }
 }
