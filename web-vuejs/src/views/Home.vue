@@ -4,7 +4,7 @@
       <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
       <!-- Cabeçalho do App-->
-        <div class="searchBar"><fa :icon="['fas', 'search']" /> </div> 
+        <div class="searchBar"> <SearchBar/> </div> 
         <div class="user">
           <div class="notificationBell"><fa :icon="['fas', 'bell']" /></div> 
           <div class="userIcon"><fa :icon="['fas', 'user']" /></div>
@@ -62,6 +62,7 @@
 <script>
 
 import Dish from "../components/Dish.vue"
+import SearchBar from "../components/SearchBar.vue"
 //Importando instância do axios do api.js
 import api from "../services/api.js"
 
@@ -70,8 +71,8 @@ export default {
   name: 'Home',
 
   components: {
-    Dish
-  },
+    Dish, SearchBar
+  }, 
 
   data() {
     return {
@@ -102,8 +103,8 @@ export default {
   position: relative;
   width: 85%;
   height: 100%;
-  left: 15%;
   display: flex;
+  left:15%;
   flex-direction: column;
   gap: 1vw;
   z-index: 8;
