@@ -38,11 +38,7 @@
       </div>
 </template>
 
-
-
-
 <script>
-
 
 export default {
       name: 'NavBar',
@@ -71,9 +67,6 @@ export default {
       width: 100%;
 }
 
-
-
-
 .navBarOptions ul{
       display: flex;
       flex-direction: column;
@@ -88,8 +81,6 @@ export default {
       text-decoration: none;
       color: #000;
 }
-
-
 
 .navBarUser{
       display: flex;

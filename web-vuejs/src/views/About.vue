@@ -6,7 +6,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
            
       </div>
-      <div class="credits"><a href='https://www.freepik.com/vectors/logo'>Logo vector created by freepik - www.freepik.com</a></div>
+      <div class="credits"><a href='https://www.freepik.com/vectors/background'>Background vector created by wangstdo - www.freepik.com</a></div>
 </template>
 
 <script>
