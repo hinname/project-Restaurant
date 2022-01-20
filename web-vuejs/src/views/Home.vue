@@ -47,7 +47,8 @@
       <div class="menu" v-else>
       <!-- O Cardápio com as Opções-->
             <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-          <Dish  v-for="dish in dishes" :key="dish.id" 
+          <Dish  v-for="dish in dishes" :key="dish.id"
+            :id="dish.id"
             :name="dish.nome" 
             :image="dish.imagem" 
             :ingredients="dish.ingredientes" 
