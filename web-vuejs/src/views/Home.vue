@@ -47,12 +47,23 @@
 
       </div>
     </div>
+  
+  <div id="mostReq">
+      <MostReq> 
+        <Dish  v-for="dish in dishes" :key="dish.id" 
+            :name="dish.nome" 
+            :image="dish.imagem" 
+            :ingredients="dish.ingredientes" 
+            :price="dish.preco"
+          />
+      </MostReq>
+  </div>
 </template>
 
 <script>
 
 import Dish from "../components/Dish.vue"
-
+import MostReq from "../views/MostReq.vue"
 //Importando instância do axios do api.js
 import api from "../services/api.js"
 
@@ -96,7 +107,7 @@ export default {
   display: flex;
   flex-direction: column;
   gap: 1vw;
-  
+  z-index: 8;
 }
 
 .mainContainer *{
@@ -166,8 +177,7 @@ export default {
   overflow: scroll;
   justify-items: center;
   object-fit: cover;
-  
-}
+  }
 }
 
 </style>
