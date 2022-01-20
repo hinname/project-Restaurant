@@ -21,6 +21,7 @@ export default {
       name: 'Dish',
 
       props: {
+            id: String,
             name: String,
             image: String,
             ingredients: String,
@@ -30,34 +31,40 @@ export default {
       data(){
             return {
                   altImag: 'Foto do prato',
+                  dish: {
+                        id: this.id,
+                        name: this.name,
+                        image: this.image,
+                        ingtedients: this.ingredients,
+                        price: this.price,
+                        quantity: '1'
+                  },
             }
       },
 
       methods: {
-            CartWrite () {
+            async CartWrite() {
                   const fs = require('fs');
-                  fs.readFile('../services/cart.json', (err, data) => {
-                        const cartProducts = JSON.parse(data);
-                        const newCartProduct = {
-                              id: 1,
-                              nome: "Pizza de Pepperoni",
-                              imagem: "http://localhost:3000/images/pepperoni.jpg",
-                              ingredientes: "Muçarela, Molho de tomate, Pepperoni.",
-                              preco: "R$32,50",
-                              quantity: 1
-                        };
-                        let cartProductExists = false;
-                        cartProducts.map((cartProduct) => {
-                              if (cartProduct.id === newCartProduct.id) {
-                                    cartProduct.quantity++;
-                                    cartProductExists = true;
-                              }
-                        });
-                        if (!cartProductExists) {
-                              cartProducts.push(newCartProduct)
+
+                  let cartProducts = await require('../services/cart.json')
+
+                  let cartProductExists = false;
+
+                  cartProducts.map((cartProduct) => {
+                        if (cartProduct.id === this.id) {
+                              cartProduct.quantity++;
+                              cartProductExists = true;
                         }
-                        fs.writeFile('../services/cart.json', JSON.stringify(cartProducts))
                   });
+
+                  if (!cartProductExists) {
+                        cartProducts.push(this.dish)
+                  }
+
+                  console.log(cartProducts)
+                  console.log(fs)
+
+                  localStorage.setItem('Cart', JSON.stringify(cartProducts));
             }
       }
 

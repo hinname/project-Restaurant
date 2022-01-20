@@ -28,6 +28,13 @@
           <p>Alcoólicos</p>
         </div>
       </div>
+
+      <div class="go-cart" v-show="showButtonCart">
+        <routerLink to="cart">
+          Fazer pedido 
+          <fa icon="angle-double-right" /> 
+        </routerLink>
+      </div>
       
       <!-- se a busca falhar ele imprime essa mensagem-->
       <div class="menuAlternative" v-if="notFoundDishes">
@@ -35,10 +42,13 @@
           <h1>Pratos não encontrados!</h1>
         </div>
       </div>
+
+
       <div class="menu" v-else>
       <!-- O Cardápio com as Opções-->
             <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-          <Dish  v-for="dish in dishes" :key="dish.id" 
+          <Dish  v-for="dish in dishes" :key="dish.id"
+            :id="dish.id"
             :name="dish.nome" 
             :image="dish.imagem" 
             :ingredients="dish.ingredientes" 
@@ -80,6 +90,7 @@ export default {
       dishes: "",
       dish: "",
       notFoundDishes: false,
+      showButtonCart: true
     }
   },
 
@@ -149,6 +160,28 @@ export default {
   gap: 2rem;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+.go-cart {
+  margin: 1rem 0 1rem;
+  text-align: right;
+}
+
+.go-cart a {
+  text-decoration: none;
+  background: rgb(202, 29, 29);
+  color: rgba(255, 255, 255, 0.925);
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 0 1.5rem;
+
+  opacity: 0.8;
+  transition: 0.3s;
+  
+}
+
+.go-cart a:hover {
+  opacity: 1;
 }
 
 .menu {
