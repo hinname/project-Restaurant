@@ -126,7 +126,7 @@ export default {
 
 .header .searchBar{
   background-color: white;
-  width: 25%;
+  width: 50%;
   min-width: 10rem;  
   padding: 0.8rem 1rem 0.8rem;
   border-radius: 1.5rem;
@@ -134,6 +134,7 @@ export default {
 
 .header .user{
   display: flex;
+  margin: 0 1rem 0 ;
   gap: 3rem;
 }
 
