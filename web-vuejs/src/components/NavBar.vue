@@ -1,7 +1,7 @@
 <template>
       <div class="navBar">
             <!-- Nav Bar do App. Fixa à Esquerda-->
-            <div class="bigLogo">Restaurant Logo</div>
+            <div class="bigLogo"><img src="../assets/Restaurant-logo_light.jpg" alt="Logo do Restaurant"></div>
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
                   <ul>
@@ -34,7 +34,6 @@
             <div class="socialMediaLinks">
                   <a href="https://www.facebook.com"><fa :icon="['fab', 'facebook']" /></a>
                   <a href="https://www.instagram.com"><fa :icon="['fab', 'instagram']" /></a>
-                  
             </div>
       </div>
 </template>
@@ -65,8 +64,15 @@ export default {
 }
 
 .bigLogo{
-      margin-top:1rem;
+      max-width: 100%;
 }
+
+.bigLogo img{
+      width: 100%;
+}
+
+
+
 
 .navBarOptions ul{
       display: flex;

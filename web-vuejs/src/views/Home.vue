@@ -4,10 +4,10 @@
       <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
       <!-- Cabeçalho do App-->
-        <div class="searchBar">Search</div> 
+        <div class="searchBar"><fa :icon="['fas', 'search']" /> </div> 
         <div class="user">
-          <div class="notificationBell">Sino</div> 
-          <div class="userIcon">Ícone do User</div>
+          <div class="notificationBell"><fa :icon="['fas', 'bell']" /></div> 
+          <div class="userIcon"><fa :icon="['fas', 'user']" /></div>
         </div>
       </div>
       
@@ -122,6 +122,14 @@ export default {
   align-items: center;
   padding: 1rem;
   background: whitesmoke;
+}
+
+.header .searchBar{
+  background-color: white;
+  width: 25%;
+  min-width: 10rem;  
+  padding: 0.8rem 1rem 0.8rem;
+  border-radius: 1.5rem;
 }
 
 .header .user{

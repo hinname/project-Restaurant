@@ -1,13 +1,13 @@
 <template>
   <div class="container">
     <div class="title"> <h1>As Mais Pedidas</h1></div>
-    <Dish  v-for="dish in dishes" :key="dish.id" 
-            :name="dish.nome" 
-            :image="dish.imagem" 
-            :ingredients="dish.ingredientes" 
-            :price="dish.preco"
-          />
-  </div>
+      <Dish  v-for="dish in dishes" :key="dish.id" 
+              :name="dish.nome" 
+              :image="dish.imagem" 
+              :ingredients="dish.ingredientes" 
+              :price="dish.preco"
+            />
+    </div>
 </template>
 
 <script>
