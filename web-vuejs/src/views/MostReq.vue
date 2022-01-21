@@ -29,11 +29,11 @@ export default {
 <style>
   .container{
   position: absolute;
+  display: flex;
   z-index: 8;
   width: 85%;
   height: 100%;
   left: 15%;
-  display: flex;
   flex-direction: column;
   }
 

@@ -42,18 +42,16 @@
       </div>
       <div class="popUpContainer">
             <MostReq/>
-            <Overlay/>
       </div>
 </template>
 
 <script>
 import MostReq from "../views/MostReq.vue"
-import Overlay from "./Overlay.vue"
 export default {
       name: 'NavBar',
       
       components: {
-            MostReq, Overlay
+            MostReq, 
       },
 }
 </script>
@@ -122,7 +120,7 @@ export default {
 }
 
 .popUpContainer{
-      display: flex;
+      display: none;
 }
 
 </style>
