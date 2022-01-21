@@ -1,6 +1,7 @@
 <template>
   <div class="barContainer">
     <fa :icon="['fas', 'search']" /> 
+
   </div>
 </template>
 
@@ -11,4 +12,8 @@ export default {
 </script>
 
 <style>
+  .barContainer{
+    display: flex;
+  
+  }
 </style>

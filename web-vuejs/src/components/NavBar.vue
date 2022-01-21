@@ -26,7 +26,11 @@
             </div>
             <div class="navBarUser">
                   <!-- Informações do Usuário/Mesa-->
-                  <div class="userID">Mesa #X/Usuário X</div>
+                  <div class="ids">
+                        <div class="userID">User #X</div>
+                        <div class="tableID">Mesa #Y</div>
+                  </div>
+
                   <div class="userStatus">Vazia</div>
                   <!-- Status da Mesa: Vazia, Ocupada, Indisponível.
                         Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
@@ -36,12 +40,21 @@
                   <a href="https://www.instagram.com"><fa :icon="['fab', 'instagram']" /></a>
             </div>
       </div>
+      <div class="popUpContainer">
+            <MostReq/>
+            <Overlay/>
+      </div>
 </template>
 
 <script>
-
+import MostReq from "../views/MostReq.vue"
+import Overlay from "./Overlay.vue"
 export default {
       name: 'NavBar',
+      
+      components: {
+            MostReq, Overlay
+      },
 }
 </script>
 
@@ -85,7 +98,13 @@ export default {
 .navBarUser{
       display: flex;
       flex-direction: column;
-      gap:0.5rem;
+      gap:0.8rem;
+}
+
+.ids{
+      display: flex;
+      flex-direction: column;
+      gap:0.4rem;
 }
 
 .socialMediaLinks{
@@ -100,6 +119,10 @@ export default {
       margin: 0 0.5rem;
       text-decoration: none;
       color: #000;
+}
+
+.popUpContainer{
+      display: flex;
 }
 
 </style>

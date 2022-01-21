@@ -101,13 +101,13 @@ export default {
 
 .container{
   position: relative;
+  display: flex;
   width: 85%;
   height: 100%;
-  display: flex;
   left:15%;
   flex-direction: column;
   gap: 1vw;
-  z-index: 8;
+  z-index: 5;
 }
 
 .mainContainer *{
