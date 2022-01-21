@@ -35,9 +35,17 @@ export default {
                         id: this.id,
                         name: this.name,
                         image: this.image,
-                        ingtedients: this.ingredients,
+                        ingredients: this.ingredients,
                         price: this.price,
                         quantity: '1'
+                  },
+                  prato: {
+                        id: 1,
+                        name: "Pizza de Pepperoni",
+                        ingredients: "Muçarela, Molho de tomate, Pepperoni.",
+                        image: "http://localhost:3000/images/pepperoni.jpg",
+                        price: "R$32,50",
+                        quantity: 1
                   },
             }
       },
@@ -51,14 +59,14 @@ export default {
                   let cartProductExists = false;
 
                   cartProducts.map((cartProduct) => {
-                        if (cartProduct.id === this.id) {
+                        if (cartProduct.id === 1) {
                               cartProduct.quantity++;
                               cartProductExists = true;
                         }
                   });
 
                   if (!cartProductExists) {
-                        cartProducts.push(this.dish)
+                        cartProducts.push(this.prato)
                   }
 
                   console.log(cartProducts)

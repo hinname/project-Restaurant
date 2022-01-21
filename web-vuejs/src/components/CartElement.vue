@@ -10,7 +10,8 @@
             </div>
             <div class="cartBottom">
                   <div class="priceTag"><p>{{price}}</p></div>
-                  <div class="toggleToChart"><button @click="CartRead">Opção - Cesta</button></div>
+                  <div class="quantity"><p>Quantidade:<br>{{quantity}}</p></div>
+                  <div class="toggleToChart"><button @click="CartDelete">Deletar item</button></div>
             </div>
       </div>
 </template>
@@ -24,7 +25,8 @@ export default {
             name: String,
             image: String,
             ingredients: String,
-            price: String
+            price: String,
+            quantity: String
       },
 
       data(){
@@ -34,10 +36,23 @@ export default {
       },
 
       methods: {
-            async CartRead() {
-                  var obj = JSON.parse(localStorage.getItem('Cart'));
+            async CartDelete() {
+                  //puxando o elemento Cart
+                  var cartProducts = JSON.parse(localStorage.getItem('Cart'));
+                  cartProducts.map((cartProduct) => {
+                    //id = 1 por puxar um unico elemento, a pizza
+                    if (cartProduct.id === 1 && cartProduct.quantity > 1) {
+                    cartProduct.quantity--;
+                    //removendo o elemento caso a quantidade seja 1
+                    } else if (cartProduct.id === 1 && cartProduct.quantity === 1) {
+                    const cartIndexToRemove = cartProducts.findIndex(cartProduct => cartProduct.id === 1);
+                    cartProducts.splice(cartIndexToRemove, 1);
+                    }
+                  });
+                  //guardando a informação no elemento Cart
+                  localStorage.setItem('Cart', JSON.stringify(cartProducts));
 
-                  console.log(obj)
+                  console.log(cartProducts)
             }
       }
 }
@@ -50,12 +65,12 @@ export default {
       padding: 1.5rem;
       flex-direction: column;
       height: 75%;
-      width:70%;
-      grid-template-columns: repeat(5, 2fr);
+      width:90%;
+      grid-template-columns: repeat(6, 2fr);
       margin: 2rem 0 3rem;
       align-items: center;
       text-align: center;
-      gap: 1rem;
+      gap: 3rem;
 
 }
 
