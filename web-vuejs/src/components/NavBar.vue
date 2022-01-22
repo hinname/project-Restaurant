@@ -1,7 +1,7 @@
 <template>
       <div class="navBar">
             <!-- Nav Bar do App. Fixa à Esquerda-->
-            <div class="bigLogo"><img src="../assets/Restaurant-logo_light.jpg" alt="Logo do Restaurant"></div>
+            <div class="bigLogo"></div>
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
                   <ul>
@@ -27,11 +27,11 @@
             <div class="navBarUser">
                   <!-- Informações do Usuário/Mesa-->
                   <div class="ids">
-                        <div class="userID">User #X</div>
-                        <div class="tableID">Mesa #Y</div>
+                        <div class="userID"><p>User #X</p></div>
+                        <div class="tableID"><p>Mesa #Y</p></div>
                   </div>
 
-                  <div class="userStatus">Vazia</div>
+                  <div class="userStatus"><p>Vazia</p></div>
                   <!-- Status da Mesa: Vazia, Ocupada, Indisponível.
                         Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
             </div>
@@ -47,35 +47,35 @@
 
 <script>
 import MostReq from "../views/MostReq.vue"
+
 export default {
       name: 'NavBar',
       
       components: {
-            MostReq, 
+            MostReq
       },
 }
 </script>
 
 <style scoped>
+
 .navBar{
+      background-color: var(--backgroundColor);
       position: fixed;
       display: flex;
       flex-direction: column;
       width: 15%;
       height: 100vh;
       left:0;
-      background: white;
       text-align: center;
       justify-content: space-between;
       z-index: 10;
 }
 
 .bigLogo{
-      max-width: 100%;
-}
-
-.bigLogo img{
       width: 100%;
+      height: 18%;
+      background: url(../assets/Restaurant-logo_light.jpg);
 }
 
 .navBarOptions ul{
@@ -90,7 +90,6 @@ export default {
 
 .navBarOptions a {
       text-decoration: none;
-      color: #000;
 }
 
 .navBarUser{
@@ -116,7 +115,7 @@ export default {
 .socialMediaLinks a {
       margin: 0 0.5rem;
       text-decoration: none;
-      color: #000;
+      color: var(--DarkOne);
 }
 
 .popUpContainer{

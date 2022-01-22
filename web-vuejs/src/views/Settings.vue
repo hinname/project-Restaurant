@@ -1,10 +1,10 @@
 <template>
      <div class="container">
-            <h1>Configurações do app</h1>
-            <div class="options">
-                  <div class="darkModeOption"> 
-                        <h3> Modo Dark</h3> 
-                        <Switch class="darkModeSwitch"/>
+     <h1>Configurações do app</h1>
+      <div class="options">
+            <div class="darkModeOption"> 
+                  <h3> Modo Dark</h3> 
+                  <Switch class="darkModeSwitch"/>
                   </div>
                   <h3>Temas</h3>
                   <h3> Idiomas</h3>
@@ -22,7 +22,23 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.light {
+     --backgroundColor: #a1ce46;
+     --darOne: #312f3a;
+     --darkTwo: #45424b;
+     --lightOne: rgb(255, 255, 255);
+     --lightTwo: #ccc;
+   }
+
+   .dark {
+     --backgroundColor: #171c25;
+     --darOne: #f3f3f3;
+     --darkTwo: #fff;
+     --lightOne: #555558;
+     --lightTwo: #919191;
+   }
+
       .container{
             position: relative;
             width: 85%;
@@ -47,7 +63,7 @@ export default {
       }    
 
       h3{
-            color: rgb(29, 28, 28);
             text-align: left !important;
       }
+      
 </style>

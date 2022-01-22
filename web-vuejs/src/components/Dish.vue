@@ -1,7 +1,7 @@
 <template>
       <div class="dishes">
             <!-- Modelo do Card de um Prato-->
-            <div class="dishName">{{name}}</div>
+            <div class="dishName"><p>{{name}}</p></div>
             <div class="dishImages">
                   <img :src="image" :alt="altImag">
             </div>
@@ -80,9 +80,10 @@ export default {
 </script>
 
 <style>
+
 .dishes{
       display: flex;
-      background: white;
+      background: var(--lightOne);
       padding: 1.5rem;
       flex-direction: column;
       height: 75%;

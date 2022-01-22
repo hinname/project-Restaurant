@@ -54,7 +54,6 @@
             :ingredients="dish.ingredientes" 
             :price="dish.preco"
           />
-
       </div>
     </div>
 </template>
@@ -122,11 +121,11 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: whitesmoke;
+  background: var(--lightTwo);
 }
 
 .header .searchBar{
-  background-color: white;
+  background-color: var(--lightOne);
   width: 50%;
   min-width: 10rem;  
   padding: 0.8rem 1rem 0.8rem;
@@ -145,7 +144,7 @@ export default {
   flex-direction: column;
   gap:1rem;
   padding: 1rem;
-  background: whitesmoke;
+  background: var(--lightTwo);
 }
 
 .filterTitle{
@@ -197,7 +196,6 @@ export default {
   text-align: center;
   margin-top: 2rem;
 }
-
 
 @media screen and (max-width: 1024px) {
   .menu{
