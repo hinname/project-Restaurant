@@ -33,7 +33,7 @@ p,h1,h2,h3,li,a{
 
 .light {
      --backgroundColor: #a1ce46;
-     --backgroundImage: url();
+     /*--backgroundImage: url(); */
      --darOne: #312f3a;
      --darkTwo: #45424b;
      --lightOne: white;

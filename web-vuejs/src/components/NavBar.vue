@@ -1,7 +1,9 @@
 <template>
       <div class="navBar">
             <!-- Nav Bar do App. Fixa à Esquerda-->
-            <div class="bigLogo"></div>
+            <div class="bigLogo">
+                  <img :src="require(`../assets/${image}`)" alt="foto">
+            </div>
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
                   <ul>
@@ -54,6 +56,12 @@ export default {
       components: {
             MostReq
       },
+
+      data() {
+            return {
+                  image: 'Restaurant-logo_light.jpg'
+            }
+      }
 }
 </script>
 
@@ -75,7 +83,10 @@ export default {
 .bigLogo{
       width: 100%;
       height: 18%;
-      background: url(../assets/Restaurant-logo_light.jpg);
+}
+
+.bigLogo img {
+      width: 100%;
 }
 
 .navBarOptions ul{

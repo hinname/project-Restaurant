@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import CartElement from "../components/CartElement.vue"
+import CartElement from "../components/Cart/CartElement.vue"
 
 //Importando instância do axios do api.js
 //import api from "../services/api.js"

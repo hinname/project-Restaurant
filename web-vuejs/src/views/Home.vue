@@ -61,7 +61,7 @@
 <script>
 
 import Dish from "../components/Dish.vue"
-import SearchBar from "../components/SearchBar.vue"
+import SearchBar from "../components/Home/SearchBar.vue"
 //Importando instância do axios do api.js
 import api from "../services/api.js"
 
