@@ -16,6 +16,10 @@ export default createStore({
   mutations: {
     changeDarkMode(state) {
       state.dark = !state.dark;
+    },
+
+    addDishCart(state, payload) {
+      state.cart.push(payload)
     }
   },
   actions: {
