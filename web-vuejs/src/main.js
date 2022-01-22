@@ -8,10 +8,11 @@ import {faFacebook, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 library.add(fas, faFacebook, faInstagram)
 
-createApp(App)
+createApp(App).use(store)
 .component('fa', FontAwesomeIcon)
 .use(router)
 .mount('#app')
