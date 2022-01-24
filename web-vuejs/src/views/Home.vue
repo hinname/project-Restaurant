@@ -158,11 +158,7 @@ export default {
 }
 
 .header .searchBar{
-  background-color: var(--lightOne);
   width: 50%;
-  min-width: 10rem;  
-  padding: 0.8rem 1rem 0.8rem;
-  border-radius: 1.5rem;
 }
 
 .header .user{
