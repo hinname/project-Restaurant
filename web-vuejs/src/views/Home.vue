@@ -17,15 +17,27 @@
           <h3>Filtros</h3> 
         </div> 
         <div class="filterOptions">
-          <p>Sobremesas</p>
-          <p>Carne</p>
-          <p>Frango</p>
-          <p>Veganos</p>
-          <p>Vegetarianos</p>
-          <p>Fit</p>
-          <p>Fritos</p>
-          <p>Sucos</p>
-          <p>Alcoólicos</p>
+
+          <select name="food-drink" id="food-drink">
+            <option value="comida">Comida</option>
+            <option value="bebida">Bebida</option>
+          </select>
+
+          <select v-show="foodFilter" name="comida" id="comida">
+            <option value="sobremesas">Sobremesas</option>
+            <option value="carne">Carne</option>
+            <option value="frango">Frango</option>
+            <option value="veganos">Veganos</option>
+            <option value="vegetarianos">Vegetarianos</option>
+            <option value="fit">Fit</option>
+            <option value="fritos">Fritos</option>
+          </select>
+
+          <select v-show="drinkFilter" name="bebida" id="bebida">
+            <option value="sucos">Sucos</option>
+            <option value="alcoolicos">Alcoólicos</option>
+          </select>
+      
         </div>
       </div>
 
@@ -78,7 +90,9 @@ export default {
       dishes: "",
       dish: "",
       notFoundDishes: false,
-      showButtonCart: true
+      showButtonCart: true,
+      foodFilter: false,
+      drinkFilter: false
     }
   },
 
@@ -92,7 +106,8 @@ export default {
       console.log(err)
       this.notFoundDishes = true
     })
-  }
+  },
+
 }
 </script>
 
@@ -155,8 +170,9 @@ export default {
   display: flex;
   flex-direction: row;
   gap: 2rem;
-  justify-content: center;
+  justify-content: left;
   flex-wrap: wrap;
+  margin-left: 2rem;
 }
 
 .go-cart {
