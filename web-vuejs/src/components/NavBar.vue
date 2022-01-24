@@ -93,6 +93,7 @@ export default {
       display: flex;
       flex-direction: column;
       gap:1rem;
+      font-size: 1.05rem;
 }
 
 .navBarOptions .router-link-active {

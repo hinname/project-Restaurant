@@ -64,5 +64,7 @@ p,h1,h2,h3,li,a{
   z-index:1;
 
   background: var(--lightThree);
+
+  font-family: 'Roboto';
 }
 </style>

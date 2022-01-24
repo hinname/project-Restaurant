@@ -182,6 +182,7 @@ export default {
 
 .filterTitle{
   left: 2rem;
+  font-weight: 700;
 }
 
 .filterOptions{
