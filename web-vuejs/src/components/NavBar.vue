@@ -97,7 +97,8 @@ export default {
 }
 
 .navBarOptions .router-link-active {
-      color: rgb(192, 65, 65)
+      color: #E83C3C;
+      text-shadow: 0 0 1px #0C1005;
 }
 
 .navBarOptions a {

@@ -200,23 +200,24 @@ export default {
 .go-cart {
   margin: 1rem 0 1rem;
   text-align: right;
+  
 }
 
 .go-cart a {
   text-decoration: none;
-  background: rgb(202, 29, 29);
+  background: #A1CE46;
   color: rgba(255, 255, 255, 0.925);
   border-radius: 3px;
   padding: 1rem;
   margin: 0 1.5rem;
 
-  opacity: 0.8;
+  opacity: 1;
   transition: 0.3s;
   
 }
 
 .go-cart a:hover {
-  opacity: 1;
+  background: #99be4e;
 }
 
 .menu {
