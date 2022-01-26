@@ -1,7 +1,9 @@
 <template>
       <div class="filterOptions">
 
-            <select name="food-drink" id="food-drink" @change="selectDish">
+            <p v-if="notFoundFilters">Filtro indisponível</p>
+
+            <select v-else name="food-drink" id="food-drink" @change="selectDish">
                   <option v-for="filter in filters.gerais" :key="filter.id" :value="filter.name">{{filter.name}}</option>
             </select>
 
