@@ -1,5 +1,5 @@
 const express = require('express');
-const GetDishService = require('../services/GetDishService');
+const GetDishService = require('../../services/Dish/GetDishService');
 
 class GetDishController {
   async handle(req = express.request, res = express.response) {

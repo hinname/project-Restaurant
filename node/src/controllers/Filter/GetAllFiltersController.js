@@ -1,10 +1,10 @@
 const express = require('express');
-const GetAllDishesService = require('../services/GetAllDishesService');
+const GetAllFiltersService = require('../../services/Filter/GetAllFiltersService');
 
-class GetAllDishesController {
+class GetAllFiltersController {
   async handle(req = express.request, res = express.response) {
 
-    const service = new GetAllDishesService();
+    const service = new GetAllFiltersService();
 
     const result = await service.execute();
     res.header("Access-Control-Allow-Origin", "http://localhost:8080");
@@ -13,4 +13,4 @@ class GetAllDishesController {
   }
 }
 
-module.exports = GetAllDishesController;
+module.exports = GetAllFiltersController;

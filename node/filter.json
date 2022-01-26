@@ -1,0 +1,45 @@
+{
+      "Comidas" : [
+            {
+                  "filter" : "-------"
+            },
+
+            {
+                  "filter" : "Carnes"
+            },
+
+            {
+                  "filter" : "Frangos"
+            },
+
+            {
+                  "filter" : "Fritas"
+            },
+
+            {
+                  "filter" : "Fitness"
+            },
+
+            {
+                  "filter" : "Vegatarianas"
+            },
+
+            {
+                  "filter" : "Veganas"
+            },
+
+            {
+                  "filter" : "Sobremesas"
+            }
+      ],
+
+      "Bebidas": [
+            {
+                  "filter" : "Sucos"
+            },
+
+            {
+                  "filter" : "Alcoólicos"
+            }
+      ]
+}

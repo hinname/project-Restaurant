@@ -1,7 +1,7 @@
 
 class GetDishService {
   async execute(id) {
-    let dishes = require('../../info.json')
+    let dishes = require('../../../info.json')
 
     const dish = dishes.find(dish => dish.id == id)
 

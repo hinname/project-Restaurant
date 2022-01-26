@@ -3,8 +3,9 @@ const serveIndex = require("serve-index");
 const path = require('path');
 
 
-const GetAllDishesController = require("./controllers/GetAllDishesController");
-const GetDishController = require("./controllers/GetDishController");
+const GetAllFiltersController = require("./controllers/Filter/GetAllFiltersController")
+const GetAllDishesController = require("./controllers/Dish/GetAllDishesController");
+const GetDishController = require("./controllers/Dish/GetDishController");
 
 const router = express.Router();
 
@@ -23,6 +24,9 @@ router.use('/images', serveIndex(dirname + '/images'));
 router.use(express.static('public'));
 router.use('/images', express.static('images'));
 
+
+//Disponiblizando as informações do filter.json com método GET
+router.get('/filters', new GetAllFiltersController().handle)
 
 
 //Disponibilizando as informações do info.json com GET
