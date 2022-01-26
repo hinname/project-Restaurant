@@ -2,48 +2,56 @@
       <div class="filterOptions">
 
             <select name="food-drink" id="food-drink" @change="selectDish">
-                  <option value="0">Nenhum</option>
-                  <option value="comida">Comida</option>
-                  <option value="bebida">Bebida</option>
+                  <option v-for="filter in filters.gerais" :key="filter.id" :value="filter.name">{{filter.name}}</option>
             </select>
 
             <select v-show="foodFilter" name="comida" id="comida">
-                  <option value="sobremesas">Sobremesas</option>
-                  <option value="carne">Carne</option>
-                  <option value="frango">Frango</option>
-                  <option value="veganos">Veganos</option>
-                  <option value="vegetarianos">Vegetarianos</option>
-                  <option value="fit">Fit</option>
-                  <option value="fritos">Fritos</option>
+                  <option v-for="filter in filters.comida" :key="filter.id" :value="filter.name">{{filter.name}}</option>
+                  
             </select>
 
             <select v-show="drinkFilter" name="bebida" id="bebida">
-                  <option value="sucos">Sucos</option>
-                  <option value="alcoolicos">Alcoólicos</option>
+                  <option v-for="filter in filters.bebida" :key="filter.id" :value="filter.name">{{filter.name}}</option>
             </select>
       
       </div>
 </template>
 
 <script>
+
+import api from "../../services/api"
+
 export default {
       name: 'Filter',
 
       data() {
             return {
+                  filters: {},
+
                   foodFilter: false,
-                  drinkFilter: false
+                  drinkFilter: false,
+                  notFoundFilters: false
             }
+      },
+
+      created() {
+            api.get('filters').then(response => {
+                  this.filters = response.data
+            })
+            .catch(err => {
+                  console.log(err)
+                  this.notFoundFilters = true
+            })
       },
 
       methods: {
             selectDish(event) {
-                  if(event.target.value == "comida") {
+                  if(event.target.value == "Comidas") {
                         this.drinkFilter = false;
                         return this.foodFilter = true
                   }
             
-                  if(event.target.value == "bebida") {
+                  if(event.target.value == "Bebidas") {
                         this.foodFilter = false;
                         return this.drinkFilter = true
                   }

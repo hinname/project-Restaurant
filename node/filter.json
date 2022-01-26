@@ -1,45 +1,76 @@
 {
-      "Comidas" : [
+      "gerais": [
             {
-                  "filter" : "-------"
+                  "id" :  "1",
+                  "name" : "Nenhum"
             },
-
             {
-                  "filter" : "Carnes"
+                  "id" :  "2",
+                  "name" : "Comidas"
             },
-
             {
-                  "filter" : "Frangos"
-            },
-
-            {
-                  "filter" : "Fritas"
-            },
-
-            {
-                  "filter" : "Fitness"
-            },
-
-            {
-                  "filter" : "Vegatarianas"
-            },
-
-            {
-                  "filter" : "Veganas"
-            },
-
-            {
-                  "filter" : "Sobremesas"
+                  "id" :  "2",
+                  "name" : "Bebidas"
             }
       ],
 
-      "Bebidas": [
+      "comida" : [
             {
-                  "filter" : "Sucos"
+                  "id" :  "1",
+                  "name" : "-------"
             },
 
             {
-                  "filter" : "Alcoólicos"
+                  "id" :  "2",
+                  "name" : "Carnes"
+            },
+
+            {
+                  "id" :  "3",
+                  "name" : "Frangos"
+            },
+
+            {
+                  "id" :  "4",
+                  "name" : "Fritas"
+            },
+
+            {
+                  "id" :  "5",
+                  "name" : "Fitness"
+            },
+
+            {
+                  "id" :  "6",
+                  "name" : "Vegatarianas"
+            },
+
+            {
+                  "id" :  "7",
+                  "name" : "Veganas"
+            },
+
+            {
+                  "id" :  "8",
+                  "name" : "Sobremesas"
+            }
+      ],
+
+      "bebida": [
+            {
+                  "id" :  "1",
+                  "name" : "-------"
+            },
+
+            
+            {
+                  "id" :  "2",
+                  "name" : "Sucos"
+            },
+
+            {
+                  "id" :  "3",
+                  "name" : "Alcoólicos"
             }
       ]
 }
