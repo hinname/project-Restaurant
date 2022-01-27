@@ -14,7 +14,11 @@
                         <li>
                               <RouterLink to="/cart">Cesta</RouterLink>
                         </li>
-                        <li>Os mais pedidos</li>
+                        <li>
+                              <div id="mostReqOption" @click="mostReq()">
+                                   Os mais pedidos
+                              </div> 
+                        </li>
                         <li>Promoções</li>
                         <li>Bebidas</li>
                         <li>
@@ -42,8 +46,14 @@
                   <a href="https://www.instagram.com"><fa :icon="['fab', 'instagram']" /></a>
             </div>
       </div>
-      <div class="popUpContainer">
-            <MostReq/>
+      <div id="popUpContainer">
+            <div id="mostReqContainer">
+                  <MostReq/>
+            </div>
+            <div id="closeButtom" @click="closePopUp">
+               <div class="closeBar" id="bar1"></div>
+               <div class="closeBar" id="bar2"></div>
+            </div>
       </div>
 </template>
 
@@ -57,12 +67,27 @@ export default {
             MostReq
       },
 
+      methods:{
+            mostReq(){      
+               var popUp = document.getElementById("popUpContainer")
+               popUp.setAttribute("style","display:flex")
+               var mostReq = document.getElementById("mostReqContainer")
+               mostReq.setAttribute("style","display:flex")
+            },
+            
+            closePopUp(){
+               var closeButton = document.getElementById("popUpContainer")
+               closeButton.setAttribute("style","display:none")
+            }
+      },
+
       data() {
             return {
                   image: 'Restaurant-logo_light.jpg'
             }
       }
 }
+
 </script>
 
 <style scoped>
@@ -105,6 +130,10 @@ export default {
       text-decoration: none;
 }
 
+#mostReqOption{
+      cursor:pointer;
+}
+
 .navBarUser{
       display: flex;
       flex-direction: column;
@@ -131,8 +160,44 @@ export default {
       color: var(--DarkOne);
 }
 
-.popUpContainer{
+#popUpContainer{
       display: none;
 }
+
+#mostReqContainer{
+      display: none;
+}
+
+
+
+
+
+#closeButtom{
+    position: relative;
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    align-items: center;
+    left:95%;
+    top:4%;
+    cursor: pointer;
+    z-index: 8;
+  }
+
+  .closeBar{
+    position: absolute;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 0.4rem;
+    background-color: rgb(201, 196, 196);
+  }
+
+#bar1{
+    transform: translateX(0) rotate(45deg)
+  }
+
+#bar2{
+    transform: translateX(0) rotate(-45deg)
+  }
 
 </style>
