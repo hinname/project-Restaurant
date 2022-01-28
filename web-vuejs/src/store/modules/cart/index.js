@@ -56,4 +56,6 @@ const actions = {
   removeAllCartItems ({ commit }) {
     cartProducts = [];
     commit('UPDATE_CART_ITEMS', JSON.stringify(cartProducts))
+  }
+
 }

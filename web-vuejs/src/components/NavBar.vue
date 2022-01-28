@@ -48,12 +48,9 @@
       </div>
       <div id="popUpContainer">
             <div id="mostReqContainer">
-                  <MostReq/>
+                  <MostReq @closePopUp="closePopUp" v-show="mostReqPopUp"/>
             </div>
-            <div id="closeButtom" @click="closePopUp">
-               <div class="closeBar" id="bar1"></div>
-               <div class="closeBar" id="bar2"></div>
-            </div>
+            
       </div>
 </template>
 
@@ -69,20 +66,19 @@ export default {
 
       methods:{
             mostReq(){      
-               var popUp = document.getElementById("popUpContainer")
-               popUp.setAttribute("style","display:flex")
-               var mostReq = document.getElementById("mostReqContainer")
-               mostReq.setAttribute("style","display:flex")
+                  this.mostReqPopUp = true
+                  console.log(this.mostReqPopUp)
             },
             
             closePopUp(){
-               var closeButton = document.getElementById("popUpContainer")
-               closeButton.setAttribute("style","display:none")
+                  this.mostReqPopUp = false
+                  console.log(this.mostReqPopUp)
             }
       },
 
       data() {
             return {
+                  mostReqPopUp: false,
                   image: 'Restaurant-logo_light.jpg'
             }
       }
@@ -160,44 +156,7 @@ export default {
       color: var(--DarkOne);
 }
 
-#popUpContainer{
-      display: none;
-}
-
-#mostReqContainer{
-      display: none;
-}
 
 
-
-
-
-#closeButtom{
-    position: relative;
-    display: flex;
-    width: 2rem;
-    height: 2rem;
-    align-items: center;
-    left:95%;
-    top:4%;
-    cursor: pointer;
-    z-index: 8;
-  }
-
-  .closeBar{
-    position: absolute;
-    width: 100%;
-    height: 0.3rem;
-    border-radius: 0.4rem;
-    background-color: rgb(201, 196, 196);
-  }
-
-#bar1{
-    transform: translateX(0) rotate(45deg)
-  }
-
-#bar2{
-    transform: translateX(0) rotate(-45deg)
-  }
 
 </style>
