@@ -4,7 +4,7 @@
     <div class="search-input">
       <input type="text" v-model="searchValue" placeholder="Buscar nome do prato ou bebida">
     </div>
-    <div class="search" @click="search">
+    <div class="search" @click="$emit('search', searchValue)">
         <fa :icon="['fas', 'search']" class="icon" />
     </div>
   </div>
@@ -14,11 +14,7 @@
 export default {
   name: 'SearchBar',
 
-  methods: {
-    search() {
-      console.log("pesquisar!")
-    }
-  },
+  emits:['search'],
 
   data(){
     return {

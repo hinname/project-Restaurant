@@ -4,7 +4,7 @@
       <!--Todo Conteúdo que estará à Direita do App (ou seja, ao lado da Nav Bar)-->
       <div class="header"> 
       <!-- Cabeçalho do App-->
-        <div class="searchBar"> <SearchBar/> </div> 
+        <div class="searchBar"> <SearchBar @search="changeDishes"/> </div> 
         <div class="user">
           <div class="notificationBell"><fa :icon="['fas', 'bell']" /></div> 
           <div class="userIcon"><fa :icon="['fas', 'user']" /></div>
@@ -84,6 +84,12 @@ export default {
       console.log(err)
       this.notFoundDishes = true
     })
+  },
+
+  methods: {
+    changeDishes(searchValue) {
+      console.log(searchValue)
+    }
   }
 }
 </script>
