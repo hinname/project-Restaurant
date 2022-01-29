@@ -1,13 +1,30 @@
 <template>
   <div class="barContainer">
-    <fa :icon="['fas', 'search']" class="icon" /> 
-    <input type="text" placeholder="Buscar nome do prato ou bebida">
+    
+    <div class="search-input">
+      <input type="text" v-model="searchValue" placeholder="Buscar nome do prato ou bebida">
+    </div>
+    <div class="search" @click="search">
+        <fa :icon="['fas', 'search']" class="icon" />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'SearchBar'
+  name: 'SearchBar',
+
+  methods: {
+    search() {
+      console.log("pesquisar!")
+    }
+  },
+
+  data(){
+    return {
+      searchValue:""
+    }
+  }
 }
 </script>
 
@@ -19,15 +36,21 @@ export default {
     border-radius: 1.5rem;
   }
 
-  .barContainer .icon {
-    margin-left: 1rem;
+  .search .icon {
+    margin-right: 1rem;
   }
 
-  .barContainer input {
+  .search-input {
+    width: 100%;
+    height: 100%;
     border: 0;
+  }
+
+  .search-input input {
     border-radius: 1.5rem;
     width: 100%;
     height: 100%;
+    border: 0;
     padding: 0.8rem 1rem 0.8rem;
     font-size: 1rem;
   }
