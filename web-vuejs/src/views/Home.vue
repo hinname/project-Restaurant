@@ -88,7 +88,14 @@ export default {
 
   methods: {
     changeDishes(searchValue) {
-      console.log(searchValue)
+      api.get(`dishes?name=${searchValue}`).then(response => {
+        this.dishes = response.data;
+
+      })
+      .catch(err => {
+        console.log(err)
+        this.notFoundDishes = true
+      })
     }
   }
 }

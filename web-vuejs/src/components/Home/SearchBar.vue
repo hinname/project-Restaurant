@@ -34,6 +34,9 @@ export default {
 
   .search .icon {
     margin-right: 1rem;
+    padding: 0.5rem;
+    padding-right: 0;
+    cursor: pointer;
   }
 
   .search-input {
