@@ -1,9 +1,13 @@
 
 class GetAllDishesService {
   async execute() {
-    let dishes = require('../../../info.json')
+    const dishes = require('../../../info.json')
+
+    console.log(dishes)
 
     return dishes
+
+    
   }
 }
 
