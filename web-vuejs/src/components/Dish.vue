@@ -109,14 +109,17 @@ export default {
 
 .dishImages img {
       width: 100%;
+      max-height: 18vh;
+      border-radius: 3px;
+}
 
-      border-radius: 5px;
+.dishIngredients {
+      margin-top: 1rem;
 }
 
 
 .dishBottom{
       display: flex;
-      margin-top: 2rem;
       width: 100%;
       justify-content: space-between;
 }
