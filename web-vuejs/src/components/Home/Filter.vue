@@ -4,24 +4,23 @@
 
                   <p v-if="notFoundFilters">Filtro indisponível</p>
 
-                  <select v-else name="food-drink" id="food-drink" @change="selectDish">
+                  <select v-else v-model="mainFilterValue" name="food-drink" id="food-drink" @change="selectDish">
                         <option v-for="filter in filters.gerais" :key="filter.id" :value="filter.name">{{filter.name}}</option>
                   </select>
 
-                  <select v-show="foodFilter" name="comida" id="comida">
+                  <select v-show="foodFilter" v-model="foodFilterValue" name="comida" id="comida">
                         <option v-for="filter in filters.comida" :key="filter.id" :value="filter.name">{{filter.name}}</option>
                         
                   </select>
 
-                  <select v-show="drinkFilter" name="bebida" id="bebida">
+                  <select v-show="drinkFilter" v-model="drinkFilterValue" name="bebida" id="bebida">
                         <option v-for="filter in filters.bebida" :key="filter.id" :value="filter.name">{{filter.name}}</option>
                   </select>
       
             </div>
             <div class="filterButton" v-show="!notFoundFilters && !noFilter">
-                  <button>
+                  <button @click="emitFilter">
                         Aplicar 
-            
                   </button>
             </div>
       </div>
@@ -43,12 +42,21 @@ export default {
                   drinkFilter: false,
                   notFoundFilters: false,
                   noFilter: true,
+
+
+                  mainFilterValue: "",
+                  foodFilterValue: "",
+                  drinkFilterValue: ""
             }
       },
 
       created() {
             api.get('filters').then(response => {
                   this.filters = response.data
+
+                  this.mainFilterValue = this.filters.gerais[0].name;
+                  this.foodFilterValue = this.filters.comida[0].name;
+                  this.drinkFilterValue = this.filters.bebida[0].name;
             })
             .catch(err => {
                   console.log(err)
@@ -74,6 +82,20 @@ export default {
                   this.drinkFilter = false;
                   this.noFilter = true;
                   return 
+            },
+
+            emitFilter() {
+
+                  if(this.foodFilter) {
+                        console.log(this.mainFilterValue);
+                        console.log(this.foodFilterValue);
+                        return
+                  }
+
+                  if(this.drinkFilter) {
+                        console.log(this.mainFilterValue);
+                        console.log(this.drinkFilterValue);
+                  }
             }
       }
 }

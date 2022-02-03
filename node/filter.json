@@ -53,6 +53,11 @@
             {
                   "id" :  "8",
                   "name" : "Sobremesas"
+            },
+
+            {
+                  "id" : "9",
+                  "name": "Pizzas"
             }
       ],
 
