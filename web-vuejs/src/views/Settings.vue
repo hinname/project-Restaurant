@@ -5,10 +5,10 @@
             <div class="darkModeOption"> 
                   <h3> Modo Dark</h3> 
                   <Switch class="darkModeSwitch"/>
-                  </div>
-                  <h3>Temas</h3>
-                  <h3> Idiomas</h3>
-                  <h3> Suporte</h3>
+            </div>
+            <h3>Temas</h3>
+            <h3> Idiomas</h3>
+            <h3> Suporte</h3>
             </div>
      </div>
 </template>

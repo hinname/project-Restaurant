@@ -115,6 +115,7 @@ export default {
       gap:1rem;
       font-size: 1.05rem;
       list-style: none;
+            
 }
 
 .navBarOptions .router-link-active {
