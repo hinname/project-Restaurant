@@ -16,7 +16,7 @@
                         </li>
                         <li>
                               <div id="mostReqOption" @click="mostReq()">
-                                   Os mais pedidos
+                                    Os mais pedidos
                               </div> 
                         </li>
                         <li>Promoções</li>
