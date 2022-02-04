@@ -1,7 +1,7 @@
 <template>
-  <div class="toggleSwitch">
+  <div class="toggleSwitcher" >
     <label class="switch">
-      <input type="checkbox">
+      <input type="checkbox" id="checkbox" v-model="switchState" @click="$emit('switch', switchState)">
       <span class="slider round"></span>
     </label>
   </div>
@@ -10,6 +10,13 @@
 <script>
 export default{
   name: 'Switch',
+  emits: ['switch'],
+  
+  data(){
+              return {
+                    switchState: false
+        }
+  }
 }
   
 </script>

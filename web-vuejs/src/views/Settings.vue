@@ -4,7 +4,7 @@
       <div class="options">
             <div class="darkModeOption"> 
                   <h3> Modo Dark</h3> 
-                  <Switch class="darkModeSwitch" @click="darkModeToggle()"/>
+                  <Switch class="darkModeSwitch" @switch="toggleDarkMode"/>
             </div>
             <h3>Temas</h3>
             <h3> Idiomas</h3>
@@ -18,25 +18,31 @@ import Switch from "../components/Switch.vue"
 
 export default {
   components: { Switch },
+  
   name: 'Settings',
-
-  /*
   
   methods:{
-      darkModeToggle(){
-            let main = document.querySelector('.main')
-            if (dark){
+      toggleDarkMode(switchState){
+           switchState = !switchState
+           alert(switchState)  
+           let main = document.querySelector('.main')
+           if (switchState){
                   main.classList.remove('light')
                   main.classList.add('dark')
             } else {
                   main.classList.remove('dark')
                   main.classList.add('light')
             }
+      }
+     /*   
+      darkModeToggle(){
+            let main = document.querySelector('.main')
+            
      },
             
+  */
   },
 
-  */
 }
 </script>
 
