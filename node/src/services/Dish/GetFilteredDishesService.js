@@ -1,16 +1,24 @@
 
-class GetFilteredDishesService {
-  async execute(query) {
-    const dishes = require('../../../info.json');
 
-    query = query.toLowerCase();
+class GetFilteredDishesService {
+  async execute (mainFilter, subFilter) {
+    const dishes = await require('../../../info.json');
+
+    if(subFilter == "0") {
+
+      const filteredDishes = dishes.filter((dish) => {
+        return dish.filtroPrincipal == mainFilter
+      })
+  
+      return filteredDishes;
+    }
 
     const filteredDishes = dishes.filter((dish) => {
-      return dish.nome.toLowerCase().includes(query) //|| dish.filter.includes(query)
-    })
+      return dish.filtroPrincipal == mainFilter && dish.subFiltros.includes(subFilter)
+    });
 
-    return filteredDishes;
+    return filteredDishes
   }
 }
 
-module.exports = GetFilteredDishesService;
+module.exports = GetFilteredDishesService

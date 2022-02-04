@@ -9,11 +9,13 @@
                   </select>
 
                   <select v-show="foodFilter" v-model="foodFilterValue" name="comida" id="comida">
+                        <option value="0">-------</option>
                         <option v-for="filter in filters.comida" :key="filter.id" :value="filter.name">{{filter.name}}</option>
                         
                   </select>
 
                   <select v-show="drinkFilter" v-model="drinkFilterValue" name="bebida" id="bebida">
+                        <option value="0">-------</option>
                         <option v-for="filter in filters.bebida" :key="filter.id" :value="filter.name">{{filter.name}}</option>
                   </select>
       
@@ -45,8 +47,8 @@ export default {
 
 
                   mainFilterValue: "",
-                  foodFilterValue: "",
-                  drinkFilterValue: ""
+                  foodFilterValue: "0",
+                  drinkFilterValue: "0"
             }
       },
 
@@ -55,8 +57,8 @@ export default {
                   this.filters = response.data
 
                   this.mainFilterValue = this.filters.gerais[0].name;
-                  this.foodFilterValue = this.filters.comida[0].name;
-                  this.drinkFilterValue = this.filters.bebida[0].name;
+                  //this.foodFilterValue = this.filters.comida[0].name;
+                  //this.drinkFilterValue = this.filters.bebida[0].name;
             })
             .catch(err => {
                   console.log(err)
@@ -87,14 +89,19 @@ export default {
             emitFilter() {
 
                   if(this.foodFilter) {
-                        console.log(this.mainFilterValue);
-                        console.log(this.foodFilterValue);
-                        return
+                        return this.$emit('filter',
+                        {
+                              mainFilterValue : this.mainFilterValue, 
+                              subFilterValue: this.foodFilterValue
+                        });
                   }
 
                   if(this.drinkFilter) {
-                        console.log(this.mainFilterValue);
-                        console.log(this.drinkFilterValue);
+                        return this.$emit('filter', 
+                        {
+                              mainFilterValue : this.mainFilterValue, 
+                              subFilterValue: this.drinkFilterValue
+                        });
                   }
             }
       }

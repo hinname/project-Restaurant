@@ -1,5 +1,6 @@
 const express = require('express');
 const GetAllDishesService = require('../../services/Dish/GetAllDishesService');
+const GetSearchedDishesService = require('../../services/Dish/GetSearchedDishesService')
 const GetFilteredDishesService = require('../../services/Dish/GetFilteredDishesService')
 
 class GetDishesController {
@@ -7,19 +8,20 @@ class GetDishesController {
 
     if(req.query.name) {
       const name = req.query.name;
-      const service = new GetFilteredDishesService();
+      const service = new GetSearchedDishesService();
 
       const result = await service.execute(name);
       res.header("Access-Control-Allow-Origin", "http://localhost:8080");
       return res.json(result)
     }
 
-    if(req.query.filters) {
-      const filters = req.query.filters;
+    if(req.query.mainfilter) {
+      const mainFilter = req.query.mainfilter;
+      const subFilter = req.query.subfilter;
 
       const service = new GetFilteredDishesService();
 
-      const result = await service.execute(filters);
+      const result = await service.execute(mainFilter, subFilter);
       res.header("Access-Control-Allow-Origin", "http://localhost:8080");
       return res.json(result)
     }

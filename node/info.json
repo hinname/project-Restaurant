@@ -4,8 +4,8 @@
         "nome": "Pizza de Pepperoni",
         "imagem": "http://localhost:3000/images/pepperoni.jpg",
         "ingredientes": "Muçarela, Molho de tomate, Pepperoni.",
-        "filtros": [
-            "Comidas",
+        "filtroPrincipal": "Comidas",
+        "subFiltros": [
             "Pizzas"
         ],
         "preco": "R$32,50"
@@ -15,8 +15,8 @@
         "nome": "Brownie",
         "imagem": "http://localhost:3000/images/brownie.jpg",
         "ingredientes": "Chocolate.",
-        "filtros": [
-            "Comidas",
+        "filtroPrincipal": "Comidas",
+        "subFiltros": [
             "Sobremesas"
         ],
         "preco": "R$8,00"
@@ -26,8 +26,8 @@
         "nome": "Strogonoff de Carne",
         "imagem": "http://localhost:3000/images/strogonoff.jpg",
         "ingredientes": "Arroz, carne e molho.",
-        "filtros": [
-            "Comidas",
+        "filtroPrincipal": "Comidas",
+        "subFiltros": [
             "Carnes"
         ],
         "preco": "R$42,50"
@@ -37,8 +37,8 @@
         "nome": "Bife à Parmegiana com Fritas",
         "imagem": "http://localhost:3000/images/parmegiana.jpg",
         "ingredientes": "Bife, Molho, Queijo, Arroz e Fritas.",
-        "filtros": [
-            "Comidas",
+        "filtroPrincipal": "Comidas",
+        "subFiltros": [
             "Carnes",
             "Fritas"
         ],
@@ -49,8 +49,8 @@
         "nome": "Salada de Frutas",
         "imagem": "http://localhost:3000/images/frutas.jpg",
         "ingredientes": "Frutas diversas, incluso Manga.",
-        "filtros": [
-            "Comidas",
+        "filtroPrincipal": "Comidas",
+        "subFiltros": [
             "Sobremesas",
             "Veterarianas",
             "Veganas"
@@ -62,8 +62,8 @@
         "nome": "Caipivodka",
         "imagem": "http://localhost:3000/images/caipivodka.jpg",
         "ingredientes": "Vodka, limão e gelo.",
-        "filtros": [
-            "Bebidas",
+        "filtroPrincipal": "Bebidas",
+        "subFiltros": [
             "Alcoólicos"
         ],
         "preco": "R$12,50"

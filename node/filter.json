@@ -17,64 +17,54 @@
       "comida" : [
             {
                   "id" :  "1",
-                  "name" : "-------"
-            },
-
-            {
-                  "id" :  "2",
                   "name" : "Carnes"
             },
 
             {
-                  "id" :  "3",
+                  "id" :  "2",
                   "name" : "Frangos"
             },
 
             {
-                  "id" :  "4",
+                  "id" :  "3",
                   "name" : "Fritas"
             },
 
             {
-                  "id" :  "5",
+                  "id" :  "4",
                   "name" : "Fitness"
             },
 
             {
-                  "id" :  "6",
+                  "id" :  "5",
                   "name" : "Vegatarianas"
             },
 
             {
-                  "id" :  "7",
+                  "id" :  "6",
                   "name" : "Veganas"
             },
 
             {
-                  "id" :  "8",
+                  "id" :  "7",
                   "name" : "Sobremesas"
             },
 
             {
-                  "id" : "9",
+                  "id" : "8",
                   "name": "Pizzas"
             }
       ],
 
       "bebida": [
-            {
-                  "id" :  "1",
-                  "name" : "-------"
-            },
-
             
             {
-                  "id" :  "2",
+                  "id" :  "1",
                   "name" : "Sucos"
             },
 
             {
-                  "id" :  "3",
+                  "id" :  "2",
                   "name" : "Alcoólicos"
             }
       ]

@@ -16,7 +16,7 @@
         <div class="filterTitle">
           <h3>Filtros</h3> 
         </div> 
-        <Filter />
+        <Filter @filter="filterDishes"/>
       </div>
 
       <div class="go-cart" v-show="showButtonCart">
@@ -96,7 +96,19 @@ export default {
         console.log(err)
         this.notFoundDishes = true
       })
+    },
+
+    filterDishes({mainFilterValue, subFilterValue}) {
+      api.get(`dishes?mainfilter=${mainFilterValue}&subfilter=${subFilterValue}`)
+      .then(response => {
+        this.dishes = response.data;
+      })
+      .catch(err => {
+        console.log(err)
+        this.notFoundDishes = true
+      })
     }
+
   }
 }
 </script>
