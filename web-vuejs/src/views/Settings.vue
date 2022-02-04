@@ -24,7 +24,6 @@ export default {
   methods:{
       toggleDarkMode(switchState){
            switchState = !switchState
-           alert(switchState)  
            let main = document.querySelector('.main')
            if (switchState){
                   main.classList.remove('light')
@@ -34,13 +33,6 @@ export default {
                   main.classList.add('light')
             }
       }
-     /*   
-      darkModeToggle(){
-            let main = document.querySelector('.main')
-            
-     },
-            
-  */
   },
 
 }
