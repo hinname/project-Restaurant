@@ -19,7 +19,9 @@
                                     Os mais pedidos
                               </div> 
                         </li>
-                        <li>Promoções</li>
+                        <li><div id="promotionsOption" @click="promotions()">
+                                    Promoções
+                              </div> </li>
                         <li>
                               <RouterLink to="/about">Sobre</RouterLink>
                         </li>
@@ -49,18 +51,21 @@
             <div id="mostReqContainer">
                   <MostReq @closePopUp="closePopUp" v-show="mostReqPopUp"/>
             </div>
-            
+             <div id="promotionsContainer">
+                  <Promotions @closePopUp="closePopUp" v-show="promotionsPopUp"/>
+            </div>
       </div>
 </template>
 
 <script>
 import MostReq from "../views/MostReq.vue"
+import Promotions from "../views/Promotions.vue"
 
 export default {
       name: 'NavBar',
       
       components: {
-            MostReq
+            MostReq, Promotions
       },
 
       methods:{
@@ -68,16 +73,23 @@ export default {
                   this.mostReqPopUp = true
                   console.log(this.mostReqPopUp)
             },
+
+            promotions(){
+                  this.promotionsPopUp = true
+                  console.log(this.promotionsPopUp)
+            },
             
             closePopUp(){
                   this.mostReqPopUp = false
-                  console.log(this.mostReqPopUp)
+                  this.promotionsPopUp = false
+                  // console.log(this.mostReqPopUp)          
             }
       },
 
       data() {
             return {
                   mostReqPopUp: false,
+                  promotionsPopUp: false,
                   image: 'Restaurant-logo_light.jpg'
             }
       }
@@ -127,7 +139,7 @@ export default {
       text-decoration: none;
 }
 
-#mostReqOption{
+.navBarOptions > *{
       cursor:pointer;
 }
 
@@ -156,8 +168,5 @@ export default {
       text-decoration: none;
       color: var(--DarkOne);
 }
-
-
-
 
 </style>

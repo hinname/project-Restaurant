@@ -3,6 +3,7 @@
     <NavBar/>
     <RouterView></RouterView>
   </div>
+  <Settings id="settings"/>
 </template>
 
 <script>
@@ -12,6 +13,14 @@ export default {
   name: 'App',
   components: {
     NavBar
+  },
+  methods:{
+    data(){
+      let dark
+      return{
+        dark: !dark
+      }
+    }
   }
 }
 </script>
@@ -28,6 +37,10 @@ export default {
 
 p,h1,h2,h3,li,a{
   color: var(--DarkOne)
+}
+
+#settings{
+  display:none
 }
 
 

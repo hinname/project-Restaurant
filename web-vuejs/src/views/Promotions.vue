@@ -1,7 +1,7 @@
 <template>
   <div class="mostReqPop">
     <div class="container">
-    <div class="title"> <h1>Os Mais Pedidos</h1></div>
+    <div class="title"> <h1>Promoções</h1></div>
       <div class="menu">
         <Dish/>
         <Dish/>
@@ -25,7 +25,7 @@ import Dish from "../components/Dish.vue"
 import Overlay from "../components/Overlay.vue"
 
 export default {
-  name:'MostReq',
+  name:'Promotions',
 
   emits: ['closePopUp'],
 
