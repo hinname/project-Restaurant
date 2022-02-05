@@ -71,12 +71,24 @@ export default {
       },
 
       methods:{
-            mostReq(){      
+            mostReq(){
+                  //Se já tiver um popupAtivo
+                  if(this.popUp){
+                        return
+                  }
+                  
+                  this.popUp = true
                   this.mostReqPopUp = true
                   console.log(this.mostReqPopUp)
             },
 
             promotions(){
+                  //Se já tiver um popupAtivo
+                  if(this.popUp){
+                        return
+                  }
+
+                  this.popUp = true
                   this.promotionsPopUp = true
                   console.log(this.promotionsPopUp)
             },
@@ -84,6 +96,7 @@ export default {
             closePopUp(){
                   this.mostReqPopUp = false
                   this.promotionsPopUp = false
+                  this.popUp = false //sem popupAtivo
                   // console.log(this.mostReqPopUp)          
             }
       },
@@ -92,6 +105,7 @@ export default {
             return {
                   mostReqPopUp: false,
                   promotionsPopUp: false,
+                  popUp:false,
                   image: 'Restaurant-logo_light.jpg'
             }
       }
