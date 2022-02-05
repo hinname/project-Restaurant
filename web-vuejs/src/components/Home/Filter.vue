@@ -20,7 +20,7 @@
                   </select>
       
             </div>
-            <div class="filterButton" v-show="!notFoundFilters && !noFilter">
+            <div class="filterButton" v-show="!notFoundFilters">
                   <button @click="emitFilter">
                         Aplicar 
                   </button>
@@ -43,7 +43,6 @@ export default {
                   foodFilter: false,
                   drinkFilter: false,
                   notFoundFilters: false,
-                  noFilter: true,
 
 
                   mainFilterValue: "",
@@ -70,19 +69,16 @@ export default {
             selectDish(event) {
                   if(event.target.value == "Comidas") {
                         this.drinkFilter = false;
-                        this.noFilter = false;
                         return this.foodFilter = true
                   }
             
                   if(event.target.value == "Bebidas") {
                         this.foodFilter = false;
-                        this.noFilter = false;
                         return this.drinkFilter = true
                   }
 
                   this.foodFilter = false;
                   this.drinkFilter = false;
-                  this.noFilter = true;
                   return 
             },
 
@@ -103,6 +99,12 @@ export default {
                               subFilterValue: this.drinkFilterValue
                         });
                   }
+
+                  return this.$emit('filter', 
+                  {
+                        mainFilterValue: this.mainFilterValue,
+                        subFilterValue: "0"
+                  })
             }
       }
 }

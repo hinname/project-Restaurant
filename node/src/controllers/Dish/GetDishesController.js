@@ -15,6 +15,10 @@ class GetDishesController {
       return res.json(result)
     }
 
+    if(req.query.mainfilter == "Nenhum") {
+      req.query.mainfilter = false;
+    }
+
     if(req.query.mainfilter) {
       const mainFilter = req.query.mainfilter;
       const subFilter = req.query.subfilter;
