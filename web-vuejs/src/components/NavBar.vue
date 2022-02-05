@@ -19,9 +19,11 @@
                                     Os mais pedidos
                               </div> 
                         </li>
-                        <li><div id="promotionsOption" @click="promotions()">
+                        <li>
+                              <div id="promotionsOption" @click="promotions()">
                                     Promoções
-                              </div> </li>
+                              </div>
+                        </li>
                         <li>
                               <RouterLink to="/about">Sobre</RouterLink>
                         </li>
@@ -51,7 +53,7 @@
             <div id="mostReqContainer">
                   <MostReq @closePopUp="closePopUp" v-show="mostReqPopUp"/>
             </div>
-             <div id="promotionsContainer">
+            <div id="promotionsContainer">
                   <Promotions @closePopUp="closePopUp" v-show="promotionsPopUp"/>
             </div>
       </div>
