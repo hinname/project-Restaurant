@@ -74,7 +74,7 @@ export default {
             mostReq(){
                   //Se já tiver um popupAtivo
                   if(this.popUp){
-                        return
+                        this.closePopUp()
                   }
                   
                   this.popUp = true
@@ -85,7 +85,7 @@ export default {
             promotions(){
                   //Se já tiver um popupAtivo
                   if(this.popUp){
-                        return
+                        this.closePopUp()
                   }
 
                   this.popUp = true
