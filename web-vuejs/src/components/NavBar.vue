@@ -137,13 +137,13 @@ export default {
       width: 100%;
 }
 
+
 .navBarOptions ul{
       display: flex;
       flex-direction: column;
       gap:1rem;
       font-size: 1.05rem;
       list-style: none;
-            
 }
 
 .navBarOptions .router-link-active {
@@ -157,6 +157,10 @@ export default {
 
 .navBarOptions > *{
       cursor:pointer;
+}
+
+.navBar > *{
+      color: var(--darkOne);
 }
 
 .navBarUser{

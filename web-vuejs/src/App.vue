@@ -47,20 +47,20 @@ p,h1,h2,h3,li,a{
 .light {
      --backgroundColor: #a1ce46;
      /*--backgroundImage: url(); */
-     --darOne: #312f3a;
-     --darkTwo: #45424b;
-     --lightOne: white;
+     --darkOne: #0f0f11;
+     --darkTwo: #302e35;
+     --lightOne: rgb(247, 243, 243);
      --lightTwo: rgb(238, 237, 237);
      --lightThree: rgb(221, 220, 219);
    }
 
    .dark {
      --backgroundColor: #171c25;
-     --darOne: #f3f3f3;
-     --darkTwo: #fff;
-     --lightOne: #555558;
-     --lightTwo: #919191;
-     --lightThree: rgb(199, 198, 198);
+     --darkOne: #f3f3f3;
+     --darkTwo: rgb(242, 241, 241);
+     --lightOne: #0f0f11;
+     --lightTwo: #302e35;
+     --lightThree: rgb(167, 165, 165);
    }
 
 *,html,body{
@@ -76,7 +76,7 @@ p,h1,h2,h3,li,a{
   height: 100%;
   z-index:1;
 
-  background: var(--lightThree);
+  background: var(--lightTwo);
 
   font-family: 'Roboto';
 }

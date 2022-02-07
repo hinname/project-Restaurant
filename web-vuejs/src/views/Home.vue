@@ -138,7 +138,7 @@ export default {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background: var(--lightTwo);
+  background: var(--lightOne);
 }
 
 .header .searchBar{
@@ -149,6 +149,7 @@ export default {
   display: flex;
   margin: 0 1rem 0 ;
   gap: 3rem;
+  color: var(--darkOne);
 }
 
 .filters{
@@ -157,11 +158,12 @@ export default {
   flex-direction: column;
   gap:1rem;
   padding: 1rem;
-  background: var(--lightTwo);
+  background: var(--lightOne);
 }
 
 .filterTitle{
   left: 2rem;
+  color: var(--darkOne);
   font-weight: 700;
 }
 

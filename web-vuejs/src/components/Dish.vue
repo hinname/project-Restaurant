@@ -84,6 +84,7 @@ export default {
 .dishes{
       display: flex;
       background: var(--lightOne);
+      color: var(--darkTwo);
       padding: 1.5rem;
       flex-direction: column;
       height: 75%;
@@ -94,7 +95,7 @@ export default {
       justify-content: space-between;
       gap: 1rem;
       border-radius: 5px;
-      border: 1px solid rgb(212, 211, 207);
+      border: 1px solid var(--lightThree);
 
 }
 

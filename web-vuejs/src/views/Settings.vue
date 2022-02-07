@@ -39,21 +39,6 @@ export default {
 </script>
 
 <style scoped>
-.light {
-     --backgroundColor: #a1ce46;
-     --darOne: #312f3a;
-     --darkTwo: #45424b;
-     --lightOne: rgb(255, 255, 255);
-     --lightTwo: #ccc;
-   }
-
-   .dark {
-     --backgroundColor: #171c25;
-     --darOne: #f3f3f3;
-     --darkTwo: #fff;
-     --lightOne: #555558;
-     --lightTwo: #919191;
-   }
 
       .container{
             position: relative;
@@ -80,6 +65,12 @@ export default {
 
       h3{
             text-align: left !important;
+            color: var(--darkTwo);
       }
+
+      h1{
+            color: var(--darkOne);
+      }
+
       
 </style>

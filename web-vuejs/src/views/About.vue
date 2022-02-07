@@ -29,10 +29,12 @@ export default {
 .container *{
       text-align: center;
       padding: 0 1rem 0;
+      color: var(--darkOne);
 }
 
 .container p {
       text-align: justify;
       margin: 0 6rem;
+      color: var(--darkTwo);
 }
 </style>
