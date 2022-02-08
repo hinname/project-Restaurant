@@ -1,5 +1,9 @@
 <template>
+      <div class="btn-mobile">
+            <button @click="showNav"><fa :icon="['fas', 'bars']" /></button>
+      </div>
       <div class="navBar">
+            
             <!-- Nav Bar do App. Fixa à Esquerda-->
             <div class="bigLogo">
                   <img :src="require(`../assets/${image}`)" alt="foto">
@@ -98,6 +102,19 @@ export default {
                   this.promotionsPopUp = false
                   this.popUp = false //sem popupAtivo
                   // console.log(this.mostReqPopUp)          
+            },
+
+            showNav() {
+                  this.btnShowMobileNav = !this.btnShowMobileNav;
+                  let navBar = document.querySelector('.navBar')
+
+                  if(this.btnShowMobileNav) {
+                        navBar.classList.add('active');
+                        return;
+                  }
+
+                  navBar.classList.remove('active');
+                  return
             }
       },
 
@@ -106,7 +123,8 @@ export default {
                   mostReqPopUp: false,
                   promotionsPopUp: false,
                   popUp:false,
-                  image: 'Restaurant-logo_light.jpg'
+                  image: 'Restaurant-logo_light.jpg',
+                  btnShowMobileNav: false
             }
       }
 }
@@ -126,6 +144,10 @@ export default {
       text-align: center;
       justify-content: space-between;
       z-index: 10;
+}
+
+.btn-mobile {
+      display: none;
 }
 
 .bigLogo{
@@ -187,6 +209,26 @@ export default {
       margin: 0 0.5rem;
       text-decoration: none;
       color: var(--DarkOne);
+}
+
+@media screen and (max-width: 768px){
+      .btn-mobile {
+            display: block;
+            margin: 1.5rem;
+      }
+
+      .btn-mobile button {
+            border: 0;
+            font-size: 2rem;
+      }
+
+      .navBar {
+            display: none;
+      }
+
+      .navBar.active {
+            display: flex;
+      }
 }
 
 </style>
