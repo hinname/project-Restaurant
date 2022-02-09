@@ -2,7 +2,7 @@
       <div class="filtersComp">
             <div class="filterOptions">
 
-                  <p v-if="notFoundFilters">Filtro indisponível</p>
+                  <p v-if="notFoundFilters" id="noFilter">Filtro indisponível</p>
 
                   <select v-else v-model="mainFilterValue" name="food-drink" id="food-drink" @change="selectDish">
                         <option v-for="filter in filters.gerais" :key="filter.id" :value="filter.name">{{filter.name}}</option>
@@ -142,8 +142,8 @@ export default {
 
 .filterButton button {
       padding: 0.7vw 1.2vw;
-      background: #A1CE46;
-      color: rgba(255, 255, 255, 0.925);
+      background: var(--buttonBgColorOne);
+      color: var(--buttonFontOne);
       border-radius: 3px;
       border: 0;
 
@@ -153,7 +153,11 @@ export default {
 }
 
 .filterButton button:hover {
-      background: #99be4e;
+      background: var(--buttonBgColorOneHover)
+}
+
+#noFilter {
+      color: var(--darkOne);
 }
 
 </style>

@@ -46,6 +46,10 @@ p,h1,h2,h3,li,a{
      --lightOne: rgb(247, 243, 243);
      --lightTwo: rgb(238, 237, 237);
      --lightThree: rgb(221, 220, 219);
+     --lightFour: #fff;
+     --buttonBgColorOne: #A1CE46;
+     --buttonBgColorOneHover: #99be4e;
+     --buttonFontOne: rgba(255, 255, 255, 0.925);
    }
 
    .dark {
@@ -55,6 +59,10 @@ p,h1,h2,h3,li,a{
      --lightOne: #0f0f11;
      --lightTwo: #302e35;
      --lightThree: rgb(167, 165, 165);
+     --lightFour: #212024;
+     --buttonBgColorOne: #8cc717;
+     --buttonBgColorOneHover: #71a014;
+     --buttonFontOne: #0f0f11;
    }
 
 *,html,body{

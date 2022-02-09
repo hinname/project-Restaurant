@@ -138,8 +138,8 @@ export default {
       font-size: 1rem;
 
       padding: 0.7vw 1.2vw;
-      background: #A1CE46;
-      color: rgba(255, 255, 255, 0.925);
+      background: var(--buttonBgColorOne);
+      color: var(--buttonFontOne);
       border-radius: 3px;
       border: 0;
 
@@ -149,7 +149,7 @@ export default {
 }
 
 .dishBottom button:hover {
-      background: #99be4e;
+      background: var(--buttonBgColorOneHover)
 }
 
 .dishBottom button p {

@@ -175,8 +175,8 @@ export default {
 
 .go-cart a {
   text-decoration: none;
-  background: #A1CE46;
-  color: rgba(255, 255, 255, 0.925);
+  background: var(--buttonBgColorOne);
+  color: var(--buttonFontOne);
   border-radius: 3px;
   padding: 1rem;
   margin: 0 1.5rem;
@@ -187,7 +187,7 @@ export default {
 }
 
 .go-cart a:hover {
-  background: #99be4e;
+  background: var(--buttonBgColorOneHover)
 }
 
 .menu {
@@ -204,6 +204,10 @@ export default {
   height: 100%;
   text-align: center;
   margin-top: 2rem;
+}
+
+.dishNotFound {
+  color: var(--darkOne);
 }
 
 @media screen and (max-width: 1024px) {

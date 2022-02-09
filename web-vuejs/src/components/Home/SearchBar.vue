@@ -1,5 +1,5 @@
 <template>
-  <div class="barContainer">
+  <div :class="['barContainer', $store.state.dark ? 'dark' : '']">
     
     <div class="search-input">
       <input type="text" v-model="searchValue" placeholder="Buscar nome do prato ou bebida">
@@ -21,6 +21,15 @@ export default {
       searchValue:""
     }
   }
+
+  /*
+  border: 1px solid var(--darkOne);
+
+  color: var(--darkOne);
+
+  background: var(--lightOne);
+    color: var(--darkOne);
+   */
 }
 </script>
 
@@ -28,15 +37,15 @@ export default {
   .barContainer{
     display: flex;
     align-items: center;
-    background-color: var(--lightOne);
     border-radius: 1.5rem;
+
   }
 
   .search .icon {
-    margin-right: 1rem;
     padding: 0.5rem;
     padding-right: 0;
     cursor: pointer;
+    color: var(--darkOne);
   }
 
   .search-input {
@@ -52,6 +61,8 @@ export default {
     border: 0;
     padding: 0.8rem 1rem 0.8rem;
     font-size: 1rem;
+    background: var(--lightFour);
+    color: var(--darkOne);
   }
 
   .barContainer input:focus {
