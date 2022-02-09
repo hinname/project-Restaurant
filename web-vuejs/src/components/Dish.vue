@@ -10,7 +10,12 @@
             </div>
             <div class="dishBottom">
                   <div class="priceTag"><p>{{price}}</p></div>
-                  <div class="toggleToChart"><button @click="CartWrite">Opção - Cesta</button></div>
+                  <div class="toggleToChart">
+                        <button @click="CartWrite">
+                              <p>Adicionar</p>
+                              <fa :icon="['fas', 'shopping-cart']" />
+                        </button>
+                  </div>
             </div>
       </div>
 </template>
@@ -123,6 +128,32 @@ export default {
       display: flex;
       width: 100%;
       justify-content: space-between;
+      align-items: center;
+}
+
+
+.dishBottom button {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1rem;
+
+      padding: 0.7vw 1.2vw;
+      background: #A1CE46;
+      color: rgba(255, 255, 255, 0.925);
+      border-radius: 3px;
+      border: 0;
+
+      opacity: 1;
+      transition: 0.3s;
+      cursor:pointer;
+}
+
+.dishBottom button:hover {
+      background: #99be4e;
+}
+
+.dishBottom button p {
+      margin-right: 1rem;
 }
 
 @media screen and (max-width: 768px) {
