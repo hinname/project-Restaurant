@@ -6,7 +6,7 @@
             
             <!-- Nav Bar do App. Fixa à Esquerda-->
             <div class="bigLogo">
-                  <img :src="require(`../assets/${image}`)" alt="foto">
+                  <img :src="require(`../assets/${$store.state.dark ? imageDark : imageLight }`)" alt="foto">
             </div>
             <div class="navBarOptions">
                   <!-- Opções da Nav Bar-->
@@ -123,7 +123,8 @@ export default {
                   mostReqPopUp: false,
                   promotionsPopUp: false,
                   popUp:false,
-                  image: 'Restaurant-logo_light.jpg',
+                  imageLight: 'Restaurant-logo_light.jpg',
+                  imageDark: 'Restaurant-logo_dark.jpg',
                   btnShowMobileNav: false
             }
       }

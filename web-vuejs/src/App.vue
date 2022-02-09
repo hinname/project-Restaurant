@@ -1,5 +1,6 @@
 <template>
-  <div class="main light">
+  <!-- classe main sempre ativa. Se isDark é true, tema dark, senão tema light-->
+  <div :class="['main', $store.state.dark ? 'dark' : 'light']">
     <NavBar/>
     <RouterView></RouterView>
   </div>
@@ -14,14 +15,7 @@ export default {
   components: {
     NavBar
   },
-  methods:{
-    data(){
-      let dark
-      return{
-        dark: !dark
-      }
-    }
-  }
+  
 }
 </script>
 

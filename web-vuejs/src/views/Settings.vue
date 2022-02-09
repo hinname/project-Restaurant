@@ -4,7 +4,7 @@
       <div class="options">
             <div class="darkModeOption"> 
                   <h3> Modo Dark</h3> 
-                  <Switch class="darkModeSwitch" @switch="toggleDarkMode"/>
+                  <Switch class="darkModeSwitch" :state="$store.state.dark" @switch="toggleDarkMode"/>
             </div>
             <h3>Temas</h3>
             <h3> Idiomas</h3>
@@ -22,16 +22,17 @@ export default {
   name: 'Settings',
   
   methods:{
-      toggleDarkMode(switchState){
-           switchState = !switchState
-           let main = document.querySelector('.main')
-           if (switchState){
-                  main.classList.remove('light')
-                  main.classList.add('dark')
-            } else {
-                  main.classList.remove('dark')
-                  main.classList.add('light')
-            }
+      toggleDarkMode(){
+           //let main = document.querySelector('.main')
+           //if (switchState){
+                  //main.classList.remove('light')
+                  //main.classList.add('dark')
+            //} else {
+                  //main.classList.remove('dark')
+                  //main.classList.add('light')
+            //}
+
+            this.$store.commit('changeDarkMode')
       }
   },
 

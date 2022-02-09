@@ -1,7 +1,7 @@
 <template>
   <div class="toggleSwitcher" >
     <label class="switch">
-      <input type="checkbox" id="checkbox" v-model="switchState" @click="$emit('switch', switchState)">
+      <input type="checkbox" v-model="checked" id="checkbox" @click="$emit('switch')">
       <span class="slider round"></span>
     </label>
   </div>
@@ -9,14 +9,28 @@
 
 <script>
 export default{
-  name: 'Switch',
-  emits: ['switch'],
-  
-  data(){
-              return {
-                    switchState: false
-        }
-  }
+      name: 'Switch',
+      emits: ['switch'],
+
+      props: {
+            state: Boolean
+      },
+
+      data() {
+            return {
+                  checked: false
+            }
+      },
+
+      created() {
+            if(this.state) {
+                  this.checked = true
+                  return
+            }
+
+            this.checked = false;
+      }
+
 }
   
 </script>
