@@ -39,7 +39,7 @@ p,h1,h2,h3,li,a{
 
 
 .light {
-     --backgroundColor: #a1ce46;
+     --backgroundColor: #98C739;
      /*--backgroundImage: url(); */
      --darkOne: #0f0f11;
      --darkTwo: #302e35;
@@ -53,7 +53,7 @@ p,h1,h2,h3,li,a{
    }
 
    .dark {
-     --backgroundColor: #171c25;
+     --backgroundColor: #262F3E;
      --darkOne: #f3f3f3;
      --darkTwo: rgb(242, 241, 241);
      --lightOne: #0f0f11;
