@@ -156,11 +156,19 @@ export default {
       margin-right: 1rem;
 }
 
+@media screen and (max-width: 1024px) {
+      .dishImages img {
+            max-height: 25vh;
+      }
+}
+
+
 @media screen and (max-width: 768px) {
       .dishes{
             height: 80%;
             width: 75%;
       }
+
 }
 
 </style>

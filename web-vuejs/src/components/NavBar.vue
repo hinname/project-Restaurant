@@ -1,7 +1,4 @@
 <template>
-      <div class="btn-mobile">
-            <button @click="showNav"><fa :icon="['fas', 'bars']" /></button>
-      </div>
       <div class="navBar">
             
             <!-- Nav Bar do App. Fixa à Esquerda-->
@@ -103,19 +100,6 @@ export default {
                   this.popUp = false //sem popupAtivo
                   // console.log(this.mostReqPopUp)          
             },
-
-            showNav() {
-                  this.btnShowMobileNav = !this.btnShowMobileNav;
-                  let navBar = document.querySelector('.navBar')
-
-                  if(this.btnShowMobileNav) {
-                        navBar.classList.add('active');
-                        return;
-                  }
-
-                  navBar.classList.remove('active');
-                  return
-            }
       },
 
       data() {
@@ -212,24 +196,5 @@ export default {
       color: var(--DarkOne);
 }
 
-@media screen and (max-width: 768px){
-      .btn-mobile {
-            display: block;
-            margin: 1.5rem;
-      }
-
-      .btn-mobile button {
-            border: 0;
-            font-size: 2rem;
-      }
-
-      .navBar {
-            display: none;
-      }
-
-      .navBar.active {
-            display: flex;
-      }
-}
 
 </style>

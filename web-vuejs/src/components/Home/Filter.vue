@@ -128,11 +128,10 @@ export default {
 
 .filterOptions select {
       padding: 0.8vw;
-      background: var(--lightOne);
+      background: var(--lightFour);
       color: var(--darkTwo);
-      border: 0.2;
+      border: 0;
       border-radius: 3px;
-      border-color: var(--darkTwo);
 }
 
 .filterButton {

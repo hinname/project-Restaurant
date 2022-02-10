@@ -46,6 +46,8 @@ export default {
 <style scoped>
   .mostReqPop{
       display: flex;
+      z-index: 8;
+      height: 0;
   }
 
   .container{

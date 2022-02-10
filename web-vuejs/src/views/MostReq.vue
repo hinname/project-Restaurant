@@ -1,11 +1,29 @@
 <template>
   <div class="mostReqPop">
     <div class="container">
-    <div class="title"> <h1>Os Mais Pedidos</h1></div>
-      <div class="menu">
-        <Dish/>
-        <Dish/>
-        <Dish/>
+    <div class="title"> 
+      <h1>Os Mais Pedidos</h1>
+      <p>Os mais pedidos de cada categoria</p>
+    </div>
+    <div class="menuAlternative" v-if="notFoundDishes">
+        <div class="dishNotFound" >
+          <h1>Pratos não encontrados!</h1>
+        </div>
+    </div>
+      <div v-else class="menu">
+        <div class="dish">
+          <h3>Principal prato</h3>
+          <Dish/>
+        </div>
+        <div class="dish">
+          <h3>Sobremesa</h3>
+          <Dish/>
+        </div>
+        <div class="dish">
+          <h3>Bebida</h3>
+          <Dish/>
+        </div>
+        
       </div>
     </div>
     <div class="overlay">
@@ -37,6 +55,11 @@ export default {
     Dish, Overlay
   },
 
+  data() {
+    return {
+      notFoundDishes : false
+    }
+  }
   
 }
 
@@ -46,6 +69,8 @@ export default {
 <style scoped>
   .mostReqPop{
       display: flex;
+      z-index: 8;
+      height: 0;
   }
 
   .container{
@@ -69,9 +94,33 @@ export default {
   height: 50%;
   grid-template-columns: repeat(3, 2fr);
   justify-items: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
   }
 
+  .dish {
+    display: flex;
+    color: whitesmoke;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 90%;
+  }
+
+  .dish .dishes{
+    width: 70%;
+    margin: 1rem 0;
+  }
+
+  .menuAlternative {
+  height: 100%;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.dishNotFound {
+  color: var(--darkOne);
+}
 
 
   #closeButtom{
@@ -101,4 +150,19 @@ export default {
   #bar2{
       transform: translateX(0) rotate(-45deg)
     }
+
+
+  
+  @media screen and (max-width: 1024px) {
+  
+  .menu{
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));;
+  overflow-y: scroll;
+  justify-items: center;
+  object-fit: cover;
+  }
+}
 </style>
