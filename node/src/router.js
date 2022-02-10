@@ -7,6 +7,8 @@ const GetAllFiltersController = require("./controllers/Filter/GetAllFiltersContr
 const GetDishesController = require("./controllers/Dish/GetDishesController");
 const GetDishController = require("./controllers/Dish/GetDishController");
 
+const GetMostReqDishesController = require("./controllers/MostReq/GetMostReqDishesController")
+
 const router = express.Router();
 
 
@@ -33,5 +35,9 @@ router.get('/filters', new GetAllFiltersController().handle)
 router.get('/dishes', new GetDishesController().handle)
 //Selecionando as informações do info.json por id com GET
 router.get("/dishes/:id", new GetDishController().handle)
+
+
+//Dispobilizando as informações dos most requests
+router.get('/mostreq/:filter', new GetMostReqDishesController().handle)
 
 module.exports = router;
