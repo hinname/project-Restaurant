@@ -9,27 +9,55 @@
                   <!-- Opções da Nav Bar-->
                   <ul>
                         <li>
-                              <RouterLink to="/" exact>Home</RouterLink>
+                              <RouterLink to="/" exact>
+                                    <div class="listOption">
+                                          <fa :icon="['fas','home']" class="navBarIcon"/>
+                                          <p>Home</p>
+                                    </div> 
+                              </RouterLink>
                         </li>
-                        <li>Meus pedidos</li>
                         <li>
-                              <RouterLink to="/cart">Cesta</RouterLink>
+                              <div class="pedidosDesktop">Meus Pedidos</div>
+                              <div class="pedidosMobile">
+                                    <div class="listOption">
+                                          <fa :icon="['fas','clipboard']" class="navBarIcon"/>
+                                          <p>Pedidos</p>
+                                    </div> 
+                              </div>
                         </li>
                         <li>
+                              <RouterLink to="/cart">
+                                    <div class="listOption"> 
+                                          <fa :icon="['fas','shopping-basket']" class="navBarIcon"/>
+                                          <p>Cesta</p>
+                                    </div> 
+                              </RouterLink>
+                        </li>
+                        <li id="mostReq">
                               <div id="mostReqOption" @click="mostReq()">
-                                    Os mais pedidos
+                                    Os Mais Pedidos
                               </div> 
                         </li>
-                        <li>
+                        <li id="promotions">
                               <div id="promotionsOption" @click="promotions()">
                                     Promoções
                               </div>
                         </li>
                         <li>
-                              <RouterLink to="/about">Sobre</RouterLink>
+                              <RouterLink to="/about">
+                                    <div class="listOption"> 
+                                          <fa :icon="['fas','book']" class="navBarIcon"/>
+                                          <p>About</p>
+                                    </div> 
+                              </RouterLink>
                         </li>
                         <li>
-                              <RouterLink to="/settings">Configurações</RouterLink>
+                              <RouterLink to="/settings">
+                                    <div class="listOption"> 
+                                          <fa :icon="['fas','tools']" class="navBarIcon"/>
+                                          <p>Settings</p>
+                                    </div> 
+                              </RouterLink>
                         </li>
                   </ul>
 
@@ -170,6 +198,14 @@ export default {
       color: var(--darkOne);
 }
 
+.navBarIcon{
+      display: none;
+} 
+
+.pedidosMobile{
+      display: none;
+}
+
 .navBarUser{
       display: flex;
       flex-direction: column;
@@ -196,5 +232,72 @@ export default {
       color: var(--DarkOne);
 }
 
+/* Media Query do Tablet*/
 
+@media screen and (max-width: 870px){
+
+}
+
+/* Media Query de Smartphones*/
+
+@media screen and (max-width: 480px){
+      .navBar{
+      background-color: var(--backgroundColor);
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      width: 100vw;
+      height: 12vh;
+      top: 88vh;
+      z-index: 10;
+}
+
+.bigLogo{
+      display: none;
+}
+
+.navBarOptions ul{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      height: 100%;
+      font-size: 0.85rem;
+      list-style: none;
+      gap: 10%;
+}
+
+.listOption{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+ .navBarIcon{
+       display: flex;
+       font-size: 1.5rem;
+       margin-bottom: 1rem;
+ }
+
+ #mostReq, #promotions,  .navBarUser, .socialMediaLinks, .pedidosDesktop{
+       display:none;
+ }
+
+ .pedidosMobile{
+       display: flex;
+ }
+
+}
+
+@media screen and (max-width: 360px){
+      .navBarOptions ul{
+      gap: 7.5%;
+      }
+      
+      .navBarIcon{
+       font-size: 1.35rem;
+       margin-bottom: 0.8rem;
+      }
+}
 </style>
