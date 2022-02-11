@@ -54,7 +54,7 @@
                         <li>
                               <RouterLink to="/settings">
                                     <div class="listOption"> 
-                                          <fa :icon="['fas','cog']" class="navBarIcon"/>
+                                          <fa :icon="['fas','tools']" class="navBarIcon"/>
                                           <p>Settings</p>
                                     </div> 
                               </RouterLink>
