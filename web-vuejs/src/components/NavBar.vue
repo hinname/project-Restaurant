@@ -47,7 +47,7 @@
                               <RouterLink to="/about">
                                     <div class="listOption"> 
                                           <fa :icon="['fas','book']" class="navBarIcon"/>
-                                          <p>About</p>
+                                          <p>Sobre</p>
                                     </div> 
                               </RouterLink>
                         </li>
@@ -55,7 +55,7 @@
                               <RouterLink to="/settings">
                                     <div class="listOption"> 
                                           <fa :icon="['fas','tools']" class="navBarIcon"/>
-                                          <p>Settings</p>
+                                          <p>Configurações</p>
                                     </div> 
                               </RouterLink>
                         </li>
