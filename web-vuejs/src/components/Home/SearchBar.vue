@@ -1,5 +1,5 @@
 <template>
-  <div :class="['barContainer', $store.state.dark ? 'dark' : '']">
+  <div class="barContainer">
     
     <div class="search-input">
       <input type="text" v-model="searchValue" placeholder="Buscar nome do prato ou bebida">

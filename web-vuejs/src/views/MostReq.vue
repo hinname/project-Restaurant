@@ -13,15 +13,33 @@
       <div v-else class="menu">
         <div class="dish">
           <h3>Principal prato</h3>
-          <Dish/>
+          <Dish 
+            :id="mostReqMainDish.id"
+            :name="mostReqMainDish.nome"
+            :image="mostReqMainDish.imagem"
+            :ingredients="mostReqMainDish.ingredientes"
+            :price="mostReqMainDish.preco"
+          />
         </div>
         <div class="dish">
           <h3>Sobremesa</h3>
-          <Dish/>
+          <Dish
+            :id="mostReqDessert.id"
+            :name="mostReqDessert.nome"
+            :image="mostReqDessert.imagem"
+            :ingredients="mostReqDessert.ingredientes"
+            :price="mostReqDessert.preco"
+          />
         </div>
         <div class="dish">
           <h3>Bebida</h3>
-          <Dish/>
+          <Dish
+            :id="mostReqDrink.id"
+            :name="mostReqDrink.nome"
+            :image="mostReqDrink.imagem"
+            :ingredients="mostReqDrink.ingredientes"
+            :price="mostReqDrink.preco"
+          />
         </div>
         
       </div>
@@ -42,6 +60,9 @@
 import Dish from "../components/Dish.vue"
 import Overlay from "../components/Overlay.vue"
 
+//Importando instância do axios do api.js
+import api from "../services/api.js"
+
 export default {
   name:'MostReq',
 
@@ -57,8 +78,41 @@ export default {
 
   data() {
     return {
-      notFoundDishes : false
+      notFoundDishes : false,
+      mostReqMainDish: {},
+      mostReqDessert: {},
+      mostReqDrink: {}
     }
+  },
+
+  created() {
+    
+    //most req comidas
+    api.get('mostreq/comidas').then(response => {
+      this.mostReqMainDish = response.data; //dados de resposta dessa página (json de todos os pratos) são colocados na variável dishes
+    })
+    .catch(err => {
+      console.log(err)
+      this.notFoundDishes = true
+    });
+
+    //most req sobremesas
+    api.get('mostreq/sobremesas').then(response => {
+      this.mostReqDessert = response.data; //dados de resposta dessa página (json de todos os pratos) são colocados na variável dishes
+    })
+    .catch(err => {
+      console.log(err)
+      this.notFoundDishes = true
+    })
+
+    //most req bebidas
+    api.get('mostreq/bebidas').then(response => {
+      this.mostReqDrink = response.data; //dados de resposta dessa página (json de todos os pratos) são colocados na variável dishes
+    })
+    .catch(err => {
+      console.log(err)
+      this.notFoundDishes = true
+    })
   }
   
 }
