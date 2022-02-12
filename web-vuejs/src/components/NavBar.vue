@@ -242,14 +242,10 @@ export default {
 
 @media screen and (max-width: 480px){
       .navBar{
-      background-color: var(--backgroundColor);
-      position: fixed;
-      display: flex;
       flex-direction: row;
       width: 100vw;
       height: 12vh;
       top: 88vh;
-      z-index: 10;
 }
 
 .bigLogo{
@@ -257,14 +253,12 @@ export default {
 }
 
 .navBarOptions ul{
-      display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: center;
       width: 100vw;
       height: 100%;
       font-size: 0.85rem;
-      list-style: none;
       gap: 10%;
 }
 
