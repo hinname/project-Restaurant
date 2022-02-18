@@ -173,7 +173,7 @@ export default {
 }
 
 .dishNotFound {
-  color: var(--darkOne);
+  color: whitesmoke;
 }
 
 

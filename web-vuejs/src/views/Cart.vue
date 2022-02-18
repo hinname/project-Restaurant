@@ -8,10 +8,10 @@
     <!-- O Cardápio com as Opções-->
       <!-- se a busca falhar ele imprime essa mensagem-->
       <div class="cartNotFound" v-if="notFoundCart">
-        <h1>Pratos não encontrados!</h1>
+        <h1>Nenhum prato na cesta!</h1>
       </div>
           <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-        <CartElement v-else v-for="cartElement in cartElements" :key="cartElement.id"
+        <CartElement v-else v-for="cartElement in $store.state.cart" :key="cartElement.id"
           :name="cartElement.name"
           :image="cartElement.image"
           :ingredients="cartElement.ingredients"
@@ -25,9 +25,6 @@
 <script>
 import CartElement from "../components/Cart/CartElement.vue"
 
-//Importando instância do axios do api.js
-//import api from "../services/api.js"
-
 
 export default {
   name: 'Cart',
@@ -38,34 +35,24 @@ export default {
 
   data() {
     return {
-      cartElements: "",
+  
       cartElement: "",
       notFoundCart: false,
     }
   },
 
-  //Assim que o componente Home for criado
+  
   created() {
-    //uso do axios com tipo get no /dishes
-    //api.get('dishes').then(response => {
-      //this.cartElements = response.data; //dados de resposta dessa página (json de todos os pratos) são colocados na variável dishes
-    //})
-    //.catch(err => {
-      //console.log(err)
-      //this.notFoundCart = true
-    //})
-    var cartProducts = JSON.parse(localStorage.getItem('Cart'));
-    this.cartElements = cartProducts
+    if(this.$store.state.cart.length === 0) {
+      this.notFoundCart = true
+    }
   },
 
   methods: {
         async CartDeleteAll() {
-              var cartProducts = JSON.parse(localStorage.getItem('Cart'));
-              cartProducts = "";
+            this.$store.commit('deleteCart')
 
-              localStorage.setItem('Cart', JSON.stringify(cartProducts));
-
-              console.log(cartProducts)
+            this.notFoundCart = true
         }
   }
 

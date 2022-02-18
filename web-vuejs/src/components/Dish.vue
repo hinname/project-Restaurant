@@ -57,27 +57,8 @@ export default {
 
       methods: {
             async CartWrite() {
-                  const fs = require('fs');
-
-                  let cartProducts = await require('../services/cart.json')
-
-                  let cartProductExists = false;
-
-                  cartProducts.map((cartProduct) => {
-                        if (cartProduct.id === 1) {
-                              cartProduct.quantity++;
-                              cartProductExists = true;
-                        }
-                  });
-
-                  if (!cartProductExists) {
-                        cartProducts.push(this.prato)
-                  }
-
-                  console.log(cartProducts)
-                  console.log(fs)
-
-                  localStorage.setItem('Cart', JSON.stringify(cartProducts));
+                  this.$store.dispatch('addDishCart', this.dish)
+                  alert('Item adicionado a cesta!');
             }
       }
 
