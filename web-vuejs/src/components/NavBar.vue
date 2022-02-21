@@ -55,7 +55,7 @@
                               <RouterLink to="/settings">
                                     <div class="listOption"> 
                                           <fa :icon="['fas','tools']" class="navBarIcon"/>
-                                          <p>Configurações</p>
+                                          <p>Ajustes</p>
                                     </div> 
                               </RouterLink>
                         </li>
@@ -259,7 +259,7 @@ export default {
       width: 100vw;
       height: 100%;
       font-size: 0.85rem;
-      gap: 10%;
+      gap: 8.5%;
 }
 
 .listOption{
@@ -286,12 +286,13 @@ export default {
 
 @media screen and (max-width: 360px){
       .navBarOptions ul{
-      gap: 7.5%;
+      gap: 6.5%;
+      font-size: 0.8rem;
       }
       
       .navBarIcon{
        font-size: 1.35rem;
-       margin-bottom: 0.8rem;
+       margin-bottom: 0.95rem;
       }
 }
 </style>

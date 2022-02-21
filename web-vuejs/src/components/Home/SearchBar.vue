@@ -2,7 +2,7 @@
   <div class="barContainer">
     
     <div class="search-input">
-      <input type="text" v-model="searchValue" placeholder="Buscar nome do prato ou bebida">
+      <input type="text" v-model="searchValue" placeholder="Buscar nome do prato">
     </div>
     <div class="search" @click="$emit('search', searchValue)">
         <fa :icon="['fas', 'search']" class="icon" />

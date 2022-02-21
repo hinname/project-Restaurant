@@ -1,6 +1,6 @@
 <template>
      <div class="container">
-     <h1>Configurações do app</h1>
+     <h1>Configurações </h1>
       <div class="options">
             <div class="darkModeOption"> 
                   <h3> Modo Dark</h3> 
@@ -49,6 +49,10 @@ export default {
              
       }
 
+      .container h1{
+            margin-top: 1rem;
+      }
+
       .options{
             display: flex;
             flex-direction: column;
@@ -73,5 +77,27 @@ export default {
             color: var(--darkOne);
       }
 
-      
+      @media screen and (max-width: 870px){
+      }
+
+      @media screen and (max-width: 480px) {
+            .container{
+                  left: 0;
+                  width: 100%;
+            }
+
+            h3{
+                  font-size: 1.5rem;
+            }
+
+            .darkModeSwitch{
+                  height: 1.5rem;
+            }
+      }
+
+      @media screen and (max-width: 360px) {
+            h3{
+                  font-size: 1.3rem;
+            }
+      }
 </style>

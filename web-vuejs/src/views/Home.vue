@@ -219,7 +219,27 @@ export default {
   overflow: scroll;
   justify-items: center;
   object-fit: cover;
-  }
+  }  
+}
+
+@media screen and (max-width: 480px){
+      .container{
+            left: 0;
+            width: 100%;
+            height: 88vh;
+      }
+
+      .header .searchBar{
+        width: 66%;
+      }
+
+      .header .user{
+        gap: 2rem
+      }
+
+      .go-cart{
+        margin-top: 1.5rem;
+      }
 }
 
 </style>

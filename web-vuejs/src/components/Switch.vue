@@ -94,4 +94,6 @@ export default{
       .slider.round:before {
             border-radius: 50%;
       }
+
+   
 </style>

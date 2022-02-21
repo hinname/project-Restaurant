@@ -116,9 +116,11 @@ export default {
 .dishBottom button {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-size: 1rem;
+      gap:1rem;
 
-      padding: 0.7vw 1.2vw;
+      padding: 0.7vh 1.2vw;
       background: var(--buttonBgColorOne);
       color: var(--buttonFontOne);
       border-radius: 3px;
@@ -131,10 +133,6 @@ export default {
 
 .dishBottom button:hover {
       background: var(--buttonBgColorOneHover)
-}
-
-.dishBottom button p {
-      margin-right: 1rem;
 }
 
 @media screen and (max-width: 1024px) {
@@ -150,6 +148,26 @@ export default {
             width: 75%;
       }
 
+}
+
+@media screen and (max-width: 480px){
+      .dishes{
+            font-size: 1.15rem;
+      }
+
+      .dishName{
+            font-size: 1.4rem;
+      }
+
+      .dishBottom button {
+            font-size: 1rem;
+            padding: 1.2vh 2.75vw;
+            gap: 0.8rem
+      }
+
+      .dishBottom button p{
+            font-size: 1.25rem;
+      }
 }
 
 </style>

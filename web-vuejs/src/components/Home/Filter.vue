@@ -140,12 +140,11 @@ export default {
 }
 
 .filterButton button {
-      padding: 0.7vw 1.2vw;
+      padding: 0.7vh 1.2vw;
       background: var(--buttonBgColorOne);
       color: var(--buttonFontOne);
       border-radius: 3px;
       border: 0;
-
       opacity: 1;
       transition: 0.3s;
       cursor:pointer;
@@ -159,4 +158,42 @@ export default {
       color: var(--darkOne);
 }
 
+@media screen and (max-width: 480px){
+      .filtersComp {
+            gap:2rem
+      } 
+
+      .filterOptions{
+            gap:1.35rem;
+            margin-left: 0;
+      }
+
+      .filterOptions select{
+            font-size: 1rem;
+      }
+
+      .filterButton button {
+            padding: 1.2vh 1.5vw;
+            font-size: 1.1rem;
+      }
+}
+
+@media screen and (max-width: 360px) {
+      .filtersComp{
+            gap:1.5rem;
+      }
+      
+      .filterOptions{
+            gap:0.75rem;
+            margin-left: 0;
+      }
+
+      .filterOptions select{
+            font-size:0.8rem;
+      }
+
+      .filterButton button{
+            font-size: 0.9rem;
+      }
+}
 </style>

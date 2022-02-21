@@ -71,6 +71,7 @@ export default {
   justify-content: center;
   margin-top: 2rem;
   gap: 1vw;
+  color: var(--darkOne)
 
 }
 
@@ -92,6 +93,15 @@ export default {
   display: flex;
   justify-content: right;
   width: 85%;
+}
+
+@media screen and (max-width: 480px){
+      .container{
+            left: 0;
+            width: 100%;
+            height: 88vh;
+            margin-top:0;
+      }
 }
 
 </style>
