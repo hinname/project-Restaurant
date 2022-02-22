@@ -50,7 +50,7 @@ p,h1,h2,h3,li,a{
      --buttonBgColorOne: #A1CE46;
      --buttonBgColorOneHover: #99be4e;
      --buttonbgColorTwo: rgb(255, 29, 29);
-     --buttonbgColorTwoHover: rgb(211, 23, 23);
+     --buttonbgColorTwoHover: rgb(207, 16, 16);
      --buttonFontOne: rgba(255, 255, 255, 0.925);
    }
 
@@ -64,8 +64,8 @@ p,h1,h2,h3,li,a{
      --lightFour: #212024;
      --buttonBgColorOne: #8cc717;
      --buttonBgColorOneHover: #71a014;
-     --buttonbgColorTwo: rgb(228, 24, 24);
-     --buttonbgColorTwoHover: rgb(167, 17, 17);
+     --buttonBgColorTwo: rgb(228, 24, 24);
+     --buttonBgColorTwoHover: rgb(207, 16, 16);
      --buttonFontOne: #0f0f11;
    }
 

@@ -1,18 +1,29 @@
 <template>
       <div class="cartElements">
             <!-- Modelo do Card de um Prato-->
-            <div class="cartName">{{name}}</div>
-            <div class="cartImages">
-                  <img :src="image" :alt="altImag">
-            </div>
-            <div class="cartIngredients">
-                  <p>{{ingredients}}</p>
-            </div>
-            <div class="cartBottom">
-                  <div class="priceTag"><p>{{price}}</p></div>
-                  <div class="quantity"><p>Quantidade:<br>{{quantity}}</p></div>
-                  <div class="toggleToChart"><button @click="CartDelete">Deletar item</button></div>
-            </div>
+                  <div class="leftSide">
+                        <div class="quantity"> {{quantity}}x</div>
+
+                         <div class="cartImages">
+                              <img :src="image" :alt="altImag">
+                        </div>
+
+                        <div class="cartDescription">
+                              <div class="cartName">{{name}} </div>
+
+                              <div class="cartIngredients">
+                                    <p>{{ingredients}}</p>
+                              </div>
+                        </div>
+                  </div>
+
+                  <div class="rightSide">
+                        <div class="priceTag"><p>{{price}}</p></div>
+                       
+                         <div class="toggleToChart">
+                               <fa :icon="['fas','trash']"/>
+                         </div>      
+                  </div>
       </div>
 </template>
 
@@ -60,18 +71,50 @@ export default {
 
 <style>
 .cartElements{
-      display: grid;
-      background: white;
+      display: flex;
+      flex-direction: row;
       padding: 1.5rem;
-      flex-direction: column;
+      background-color: var(--lightOne);
       height: 75%;
-      width:90%;
-      grid-template-columns: repeat(6, 2fr);
-      margin: 2rem 0 3rem;
-      align-items: center;
+      width: 90%; 
+      justify-content: space-between;
+      align-items:center;
       text-align: center;
       gap: 3rem;
+      border-radius: 6px;
+}
 
+.leftSide, .rightSide{
+      display: flex;
+      flex-direction: row;
+}
+
+.leftSide{
+      gap: 2.5rem;
+}
+
+.quantity{
+      font-weight: 900;
+      align-self: center;
+}
+
+.cartImages {
+      height: auto;
+      width: 10rem;
+}
+
+.cartImages img {
+      width: 100%;
+      border-radius: 4px;
+}
+
+.cartDescription{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      max-width: 50%;
+      gap:0.5rem;
+      padding-top: 0.5rem ;
 }
 
 .cartName{
@@ -79,21 +122,28 @@ export default {
       font-weight: bold;
 }
 
-.cartImages {
-      width: 90%;
-      height: auto;
+.rightSide{
+      gap:3rem;
+      height: 100%;
 }
 
-.cartImages img {
-      width: 100%;
-      height: 12rem;
-}
-
-
-.cartBottom{
+.priceTag{
       display: flex;
-      margin-top: 2rem;
-      width: 100%;
-      justify-content: space-between;
+      align-self:center;
+}
+
+
+.toggleToChart{
+      color:var(--buttonBgColorTwo);
+      cursor: pointer;
+      align-self: center;
+}
+
+.toggleToChart:hover{
+      color:var(--buttonBgColorTwoHover);
+}
+
+@media screen and (max-width:480px){
+      
 }
 </style>

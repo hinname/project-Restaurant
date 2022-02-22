@@ -19,6 +19,10 @@
           :quantity="cartElement.quantity"
         />
       </div>
+
+      <div class="confirmButton">
+          <button>Confirmar Pedido</button>
+      </div>
     </div>
 </template>
 
@@ -64,14 +68,13 @@ export default {
 .container{
   position: relative;
   width: 85%;
-  height: 100%;
   left: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 2rem;
-  gap: 1vw;
-  color: var(--darkOne)
+  gap: 2rem;
+  color: var(--darkOne);
 
 }
 
@@ -86,13 +89,50 @@ export default {
   display:grid;
   height: 100%;
   justify-items: center;
-  overflow: scroll;
 }
 
 .deleteallbutton{
+  position: relative;
   display: flex;
   justify-content: right;
-  width: 85%;
+  padding: 0 1.5rem 0;
+}
+
+
+.deleteallbutton button{
+  padding: 0.5rem;
+  background-color: var(--buttonBgColorTwo);
+  color: var(--buttonFontOne);
+  border:0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.deleteallbutton button:hover{
+  background-color: var(--buttonBgColorTwoHover);
+}
+
+.confirmButton{
+  position: relative;
+  display: flex;
+  justify-content: right;
+  padding: 0 1.5rem 0;
+  margin-bottom: 1rem;
+  top:-1rem;
+}
+
+.confirmButton button{
+  padding: 0.5rem;
+  background-color: var(--buttonBgColorOne);
+  color: var(--buttonFontOne);
+  border:0;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.confirmButton button:hover{
+  background-color: var(--buttonBgColorOneHover);
+  color: var(--buttonFontOne);
 }
 
 @media screen and (max-width: 480px){
