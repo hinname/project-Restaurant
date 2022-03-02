@@ -26,6 +26,12 @@ export default createStore({
       state.cart = [];
     },
 
+    deleteDishCart(state, dishName) {
+      state.cart = state.cart.filter((item) => {
+        return dishName != item.name
+      })
+    },
+
     addExistingDish(state, dish) {
       const existingDish = state.cart.find((Exdish) => {
         return dish.name == Exdish.name

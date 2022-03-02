@@ -39,34 +39,34 @@ p,h1,h2,h3,li,a{
 
 
 .light {
-     --backgroundColor: #98C739;
-     /*--backgroundImage: url(); */
-     --darkOne: #0f0f11;
-     --darkTwo: #302e35;
-     --lightOne: rgb(247, 243, 243);
-     --lightTwo: rgb(238, 237, 237);
-     --lightThree: rgb(221, 220, 219);
-     --lightFour: #fff;
-     --buttonBgColorOne: #A1CE46;
-     --buttonBgColorOneHover: #99be4e;
-     --buttonbgColorTwo: rgb(255, 29, 29);
-     --buttonbgColorTwoHover: rgb(207, 16, 16);
-     --buttonFontOne: rgba(255, 255, 255, 0.925);
+      --backgroundColor: #98C739;
+      /*--backgroundImage: url(); */
+      --darkOne: #0f0f11;
+      --darkTwo: #302e35;
+      --lightOne: rgb(247, 243, 243);
+      --lightTwo: rgb(238, 237, 237);
+      --lightThree: rgb(221, 220, 219);
+      --lightFour: #fff;
+      --buttonBgColorOne: #A1CE46;
+      --buttonBgColorOneHover: #99be4e;
+      --buttonBgColorTwo: rgb(255, 29, 29);
+      --buttonBgColorTwoHover: rgb(207, 16, 16);
+      --buttonFontOne: rgba(255, 255, 255, 0.925);
    }
 
    .dark {
-     --backgroundColor: #262F3E;
-     --darkOne: #f3f3f3;
-     --darkTwo: rgb(242, 241, 241);
-     --lightOne: #0f0f11;
-     --lightTwo: #302e35;
-     --lightThree: rgb(167, 165, 165);
-     --lightFour: #212024;
-     --buttonBgColorOne: #8cc717;
-     --buttonBgColorOneHover: #71a014;
-     --buttonBgColorTwo: rgb(228, 24, 24);
-     --buttonBgColorTwoHover: rgb(207, 16, 16);
-     --buttonFontOne: #0f0f11;
+      --backgroundColor: #262F3E;
+      --darkOne: #f3f3f3;
+      --darkTwo: rgb(242, 241, 241);
+      --lightOne: #0f0f11;
+      --lightTwo: #302e35;
+      --lightThree: rgb(167, 165, 165);
+      --lightFour: #212024;
+      --buttonBgColorOne: #8cc717;
+      --buttonBgColorOneHover: #71a014;
+      --buttonBgColorTwo: rgb(228, 24, 24);
+      --buttonBgColorTwoHover: rgb(207, 16, 16);
+      --buttonFontOne: #0f0f11;
    }
 
 *,html,body{

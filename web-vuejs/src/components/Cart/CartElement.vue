@@ -21,7 +21,7 @@
                         <div class="priceTag"><p>{{price}}</p></div>
                        
                          <div class="toggleToChart">
-                               <fa :icon="['fas','trash']"/>
+                               <fa :icon="['fas','trash']" @click="deleteItem"/>
                          </div>      
                   </div>
       </div>
@@ -47,23 +47,10 @@ export default {
       },
 
       methods: {
-            async CartDelete() {
-                  //puxando o elemento Cart
-                  var cartProducts = JSON.parse(localStorage.getItem('Cart'));
-                  cartProducts.map((cartProduct) => {
-                    //id = 1 por puxar um unico elemento, a pizza
-                    if (cartProduct.id === 1 && cartProduct.quantity > 1) {
-                    cartProduct.quantity--;
-                    //removendo o elemento caso a quantidade seja 1
-                    } else if (cartProduct.id === 1 && cartProduct.quantity === 1) {
-                    const cartIndexToRemove = cartProducts.findIndex(cartProduct => cartProduct.id === 1);
-                    cartProducts.splice(cartIndexToRemove, 1);
-                    }
-                  });
-                  //guardando a informação no elemento Cart
-                  localStorage.setItem('Cart', JSON.stringify(cartProducts));
+            async deleteItem() {
+                  this.$store.commit('deleteDishCart', this.name)
 
-                  console.log(cartProducts)
+                  this.$emit('deletedItem')
             }
       }
 }
@@ -87,6 +74,7 @@ export default {
 .leftSide, .rightSide{
       display: flex;
       flex-direction: row;
+      align-items: center;
 }
 
 .leftSide{
@@ -145,5 +133,36 @@ export default {
 
 @media screen and (max-width:480px){
       
+}
+
+
+@media screen and (max-width:670px) {
+      .cartElements {
+            flex-direction: column;
+            margin: 1rem 0;
+            height: auto;
+      }
+
+      .cartImages img {
+            max-width: 20vw;
+      }
+
+      .cartImages {
+            width: 20vw;
+      }
+
+      .cartDescription {
+            width: 40vw;
+      }
+}
+
+@media screen and (max-width:900px) {
+      .cartImages img {
+            max-width: 20vw;
+      }
+
+      .cartImages {
+            width: 20vw;
+      }
 }
 </style>

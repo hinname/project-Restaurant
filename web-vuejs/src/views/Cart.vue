@@ -3,12 +3,12 @@
       <div class="title">
         <h1>Cesta</h1>
       </div>
-      <div class="deleteallbutton"><button @click="CartDeleteAll">Apagar Cesta</button></div>
+      <div v-show="!notFoundCart" class="deleteallbutton"><button @click="CartDeleteAll">Apagar Cesta</button></div>
     <div class="menu">
     <!-- O Cardápio com as Opções-->
       <!-- se a busca falhar ele imprime essa mensagem-->
       <div class="cartNotFound" v-if="notFoundCart">
-        <h1>Nenhum prato na cesta!</h1>
+        <h2>Nenhum prato na cesta!</h2>
       </div>
           <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
         <CartElement v-else v-for="cartElement in $store.state.cart" :key="cartElement.id"
@@ -17,11 +17,16 @@
           :ingredients="cartElement.ingredients"
           :price="cartElement.price"
           :quantity="cartElement.quantity"
+          @deletedItem="noItemsCart"
         />
       </div>
 
-      <div class="confirmButton">
+      <div v-show="!notFoundCart" class="confirmButton">
           <button>Confirmar Pedido</button>
+      </div>
+
+      <div class="nav-space">
+        <span></span>
       </div>
     </div>
 </template>
@@ -57,6 +62,10 @@ export default {
             this.$store.commit('deleteCart')
 
             this.notFoundCart = true
+        },
+
+        noItemsCart() {
+          this.notFoundCart = true
         }
   }
 
@@ -85,7 +94,6 @@ export default {
 }
 
 .menu{
-  position: relative;
   display:grid;
   height: 100%;
   justify-items: center;
@@ -113,7 +121,7 @@ export default {
 }
 
 .confirmButton{
-  position: relative;
+  
   display: flex;
   justify-content: right;
   padding: 0 1.5rem 0;
@@ -122,7 +130,7 @@ export default {
 }
 
 .confirmButton button{
-  padding: 0.5rem;
+  padding: 1rem;
   background-color: var(--buttonBgColorOne);
   color: var(--buttonFontOne);
   border:0;
@@ -139,9 +147,14 @@ export default {
       .container{
             left: 0;
             width: 100%;
-            height: 88vh;
             margin-top:0;
       }
+
+      .nav-space {
+        height: 12vh;
+      }
 }
+
+
 
 </style>
