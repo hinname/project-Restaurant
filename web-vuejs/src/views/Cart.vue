@@ -22,24 +22,29 @@
       </div>
 
       <div v-show="!notFoundCart" class="confirmButton">
-          <button>Confirmar Pedido</button>
+          <button @click="confirmOrder">Confirmar Pedido</button>
       </div>
 
       <div class="nav-space">
         <span></span>
+      </div>
+
+      <div class="popUpContainer">
+        <SuccessOrder @closePopUp="closePopUp" v-show="popUp" />
       </div>
     </div>
 </template>
 
 <script>
 import CartElement from "../components/Cart/CartElement.vue"
+import SuccessOrder from "../components/Cart/SuccessOrder.vue"
 
 
 export default {
   name: 'Cart',
 
   components: {
-    CartElement
+    CartElement, SuccessOrder
   },
 
   data() {
@@ -47,6 +52,7 @@ export default {
   
       cartElement: "",
       notFoundCart: false,
+      popUp: false,
     }
   },
 
@@ -66,7 +72,15 @@ export default {
 
         noItemsCart() {
           this.notFoundCart = true
-        }
+        },
+
+        confirmOrder() {
+          this.popUp = true
+        },
+
+        closePopUp(){
+          this.popUp = false //sem popupAtivo
+        },
   }
 
 }
