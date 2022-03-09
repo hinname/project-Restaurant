@@ -57,7 +57,7 @@ export default {
 
       methods: {
             async CartWrite() {
-                  this.$store.dispatch('addDishCart', this.dish)
+                  this.$store.dispatch('cartModule/addDishCart', this.dish)
                   alert('Item adicionado a cesta!');
             }
       }

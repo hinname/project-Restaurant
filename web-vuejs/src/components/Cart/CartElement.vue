@@ -48,9 +48,11 @@ export default {
 
       methods: {
             async deleteItem() {
-                  this.$store.commit('deleteDishCart', this.name)
 
-                  this.$emit('deletedItem')
+                  
+                  this.$store.commit('cartModule/deleteDishCart', this.name)
+
+                  this.$emit('removedItem')
             }
       }
 }

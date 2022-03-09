@@ -11,13 +11,15 @@
         <h2>Nenhum prato na cesta!</h2>
       </div>
           <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-        <CartElement v-else v-for="cartElement in $store.state.cart" :key="cartElement.id"
+        <CartElement v-else v-for="cartElement in $store.state.cartModule.cart" :key="cartElement.id"
+
           :name="cartElement.name"
           :image="cartElement.image"
           :ingredients="cartElement.ingredients"
           :price="cartElement.price"
           :quantity="cartElement.quantity"
-          @deletedItem="noItemsCart"
+
+          @removedItem="checkCart"
         />
       </div>
 
@@ -50,38 +52,46 @@ export default {
   data() {
     return {
   
-      cartElement: "",
+      cartElement: {},
       notFoundCart: false,
       popUp: false,
+
     }
   },
 
   
   created() {
-    if(this.$store.state.cart.length === 0) {
+    this.checkCart();
+  },
+
+  mounted() {
+    const cartElements = document.querySelectorAll('.cartElements')
+
+    if(!cartElements) {
       this.notFoundCart = true
     }
   },
 
   methods: {
         async CartDeleteAll() {
-            this.$store.commit('deleteCart')
-
+            this.$store.commit('cartModule/deleteCart')
             this.notFoundCart = true
-        },
-
-        noItemsCart() {
-          this.notFoundCart = true
         },
 
         confirmOrder() {
           this.popUp = true
         },
 
+        checkCart() {
+              if(this.$store.state.cartModule.cart.length === 0) {
+                this.notFoundCart = true
+              }
+        },
+
         closePopUp(){
           this.popUp = false //sem popupAtivo
         },
-  }
+  },
 
 }
 </script>
@@ -139,7 +149,7 @@ export default {
   display: flex;
   justify-content: right;
   padding: 0 1.5rem 0;
-  margin-bottom: 1rem;
+  margin-top: 1rem;
   top:-1rem;
 }
 
