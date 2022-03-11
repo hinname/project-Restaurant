@@ -17,13 +17,16 @@
                               </RouterLink>
                         </li>
                         <li>
-                              <div class="pedidosDesktop">Meus Pedidos</div>
-                              <div class="pedidosMobile">
-                                    <div class="listOption">
-                                          <fa :icon="['fas','clipboard']" class="navBarIcon"/>
-                                          <p>Pedidos</p>
-                                    </div> 
-                              </div>
+                              <RouterLink to="/orders">
+                                    <div class="pedidosDesktop">Meus Pedidos</div>
+                                    <div class="pedidosMobile">
+                                          <div class="listOption">
+                                                <fa :icon="['fas','clipboard']" class="navBarIcon"/>
+                                                <p>Pedidos</p>
+                                          </div> 
+                                    </div>
+                              </RouterLink>
+                              
                         </li>
                         <li>
                               <RouterLink to="/cart">

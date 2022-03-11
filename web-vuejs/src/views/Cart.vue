@@ -79,7 +79,15 @@ export default {
         },
 
         confirmOrder() {
-          this.popUp = true
+
+          //const cart = this.$store.state.cartModule.cart
+          if(this.$store.dispatch('orderModule/addCartOrder', this.$store.state.cartModule.cart)) {
+            this.popUp = true
+            this.$store.commit('cartModule/deleteCart')
+            this.notFoundCart = true
+          }
+          
+          
         },
 
         checkCart() {
