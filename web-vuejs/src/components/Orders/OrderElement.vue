@@ -24,7 +24,7 @@
             </div>
             <div class="bottomOrder">
                   <div class="totalPrice">
-                        <p>R$ {{priceOrder}}</p>
+                        <p>{{priceOrder}}</p>
                   </div>
             </div>
       </div>
@@ -37,13 +37,17 @@ export default {
 
       props: {
             id: Number,
-            priceOrder: String,
+            priceOrder: Number,
       },
 
       data(){
             return {
                   altImag: 'Foto do prato',
             }
+      },
+
+      created() {
+
       }
 
 }

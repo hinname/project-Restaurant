@@ -37,9 +37,18 @@ export default {
 
       data() {
             return {
-                  notFoundOrder: true
+                  notFoundOrder: false
             }
+      },
+
+      created() {
+            if(this.$store.state.orderModule.order.length === 0) {
+                  this.notFoundOrder = true;
+            }
+
+
       }
+
 }
 
 </script>

@@ -27,11 +27,18 @@ const orderModule = {
   actions: {
     addCartOrder(context, dishes) {
       let priceOrder = 0;
-      let dish = {}
 
-      for(dish in dishes) {
-        priceOrder += parseInt(dish.price)
-      }
+      dishes.forEach(dish => {
+
+        let priceReplaced = dish.price.replace(/,/g, '.')
+        priceReplaced = priceReplaced.replace('R$','')
+        
+        priceOrder += parseFloat(priceReplaced)
+
+      });
+
+      priceOrder = String("R$" + priceOrder)
+      priceOrder = priceOrder.replace('.', ',')
 
       const order = {
         id: context.state.order.length + 1,
