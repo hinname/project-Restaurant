@@ -157,7 +157,6 @@ export default {
   display: flex;
   justify-content: right;
   padding: 0 1.5rem 0;
-  margin-top: 1rem;
   top:-1rem;
 }
 

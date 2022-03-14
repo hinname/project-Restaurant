@@ -24,7 +24,8 @@
             </div>
             <div class="bottomOrder">
                   <div class="totalPrice">
-                        <p>{{priceOrder}}</p>
+                        <p id="priceText">Valor total do pedido:</p>
+                        <p id="priceOrder">{{priceOrder}}</p>
                   </div>
             </div>
       </div>
@@ -55,13 +56,22 @@ export default {
 
 
 <style scoped>
+.orderElement {
+      display: flex;
+      flex-direction: column;
+      background-color: var(--lightOne);
+      width: 90%;
+      margin: 3rem 0;
+      border-radius: 6px;
+}
+
 .orderDish{
       display: flex;
       flex-direction: row;
       padding: 1.5rem;
-      background-color: var(--lightOne);
+      background-color: var(--buttonFontOne);
       height: 75%;
-      width: 90%; 
+      width: auto;
       justify-content: space-between;
       align-items:center;
       text-align: center;
@@ -118,6 +128,28 @@ export default {
       align-self:center;
 }
 
+.bottomOrder {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      width: auto;
+      padding: 1.5rem
+}
+
+.totalPrice {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+}
+
+#priceText {
+      color: var(--darkOne);
+}
+
+#priceOrder {
+      font-size: 1.2rem;
+      color: var(--buttonBgColorTwo);
+}
 
 
 @media screen and (max-width:480px){
@@ -126,14 +158,18 @@ export default {
 
 
 @media screen and (max-width:670px) {
-      .orderElements {
+      .orderElement {
+            height: auto;
+            width: 100%;
+      }
+      .orderDish {
             flex-direction: column;
-            margin: 1rem 0;
+            margin: 0 0 2rem;
             height: auto;
       }
 
       .orderImages img {
-            max-width: 20vw;
+            width: 20vw;
       }
 
       .orderImages {
@@ -143,11 +179,16 @@ export default {
       .orderDescription {
             width: 40vw;
       }
+
+
+      .bottomOrder {
+            justify-content: center;
+      }
 }
 
 @media screen and (max-width:900px) {
       .orderImages img {
-            max-width: 20vw;
+            width: 20vw;
       }
 
       .orderImages {

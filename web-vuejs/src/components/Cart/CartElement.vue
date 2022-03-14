@@ -65,7 +65,7 @@ export default {
       padding: 1.5rem;
       background-color: var(--lightOne);
       height: 75%;
-      width: 90%; 
+      width: 90%;
       justify-content: space-between;
       align-items:center;
       text-align: center;
@@ -146,7 +146,7 @@ export default {
       }
 
       .cartImages img {
-            max-width: 20vw;
+            width: 20vw;
       }
 
       .cartImages {
@@ -160,7 +160,7 @@ export default {
 
 @media screen and (max-width:900px) {
       .cartImages img {
-            max-width: 20vw;
+            width: 20vw;
       }
 
       .cartImages {
