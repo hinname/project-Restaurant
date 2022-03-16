@@ -63,9 +63,9 @@ export default {
       display: flex;
       flex-direction: row;
       padding: 1.5rem;
-      background-color: var(--lightOne);
+      background-color: var(--buttonFontOne);
       height: 75%;
-      width: 90%;
+      width: auto;
       justify-content: space-between;
       align-items:center;
       text-align: center;
@@ -141,7 +141,7 @@ export default {
 @media screen and (max-width:670px) {
       .cartElements {
             flex-direction: column;
-            margin: 1rem 0;
+            margin: 0 0 2rem;
             height: auto;
       }
 

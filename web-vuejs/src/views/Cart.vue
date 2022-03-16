@@ -10,8 +10,10 @@
       <div class="cartNotFound" v-if="notFoundCart">
         <h2>Nenhum prato na cesta!</h2>
       </div>
-          <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
-        <CartElement v-else v-for="cartElement in $store.state.cartModule.cart" :key="cartElement.id"
+
+      <div v-else class="cart">
+        <!-- para cada dish em dishes, o vue cria um componente dish passando as propriedades do prato -->
+        <CartElement  v-for="cartElement in $store.state.cartModule.cart" :key="cartElement.id"
 
           :name="cartElement.name"
           :image="cartElement.image"
@@ -21,6 +23,16 @@
 
           @removedItem="checkCart"
         />
+
+        <div class="bottomCart">
+          <div class="totalPrice">
+            <p id="priceText">Valor total da cesta:</p>
+            <p id="priceOrder">{{priceCart}}</p>
+          </div>
+        </div>
+      </div>
+          
+        
       </div>
 
       <div v-show="!notFoundCart" class="confirmButton">
@@ -55,6 +67,7 @@ export default {
       cartElement: {},
       notFoundCart: false,
       popUp: false,
+      priceCart: 0,
 
     }
   },
@@ -131,6 +144,38 @@ export default {
   justify-items: center;
 }
 
+.cart {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--lightOne);
+  width: 90%;
+  margin: 3rem 0;
+  border-radius: 6px;
+}
+
+.bottomCart {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+      width: auto;
+      padding: 1.5rem
+}
+
+.totalPrice {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+}
+
+#priceText {
+      color: var(--darkOne);
+}
+
+#priceOrder {
+      font-size: 1.2rem;
+      color: var(--buttonBgColorTwo);
+}
+
 .deleteallbutton{
   position: relative;
   display: flex;
@@ -172,6 +217,16 @@ export default {
 .confirmButton button:hover{
   background-color: var(--buttonBgColorOneHover);
   color: var(--buttonFontOne);
+}
+
+@media screen and (max-width: 670px) {
+  .cart {
+    height: auto;
+    width: 100%;
+  }
+  .bottomCart {
+      justify-content: center;
+  }
 }
 
 @media screen and (max-width: 480px){

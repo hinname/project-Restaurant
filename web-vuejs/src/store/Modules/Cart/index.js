@@ -9,6 +9,7 @@ const cartModule = {
       // image
       // ingredients
       // price
+      // total price
       // quantity
     ],
   },

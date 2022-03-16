@@ -138,6 +138,7 @@ export default {
 @media screen and (max-width: 1024px) {
       .dishImages img {
             max-height: 25vh;
+            max-width: 30vw;
       }
 }
 
