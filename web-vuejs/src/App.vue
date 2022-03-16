@@ -9,11 +9,13 @@
 
 <script>
 import NavBar from "./components/NavBar.vue"
+import Settings from "./views/Settings.vue"
 
 export default {
   name: 'App',
   components: {
-    NavBar
+    NavBar,
+    Settings
   },
   
 }
@@ -47,6 +49,7 @@ p,h1,h2,h3,li,a{
       --lightTwo: rgb(238, 237, 237);
       --lightThree: rgb(221, 220, 219);
       --lightFour: #fff;
+      --lightFive:rgba(255, 255, 255, 0.925);
       --buttonBgColorOne: #A1CE46;
       --buttonBgColorOneHover: #99be4e;
       --buttonBgColorTwo: rgb(255, 29, 29);
@@ -62,6 +65,7 @@ p,h1,h2,h3,li,a{
       --lightTwo: #302e35;
       --lightThree: rgb(167, 165, 165);
       --lightFour: #212024;
+      --lightFive:#171718;
       --buttonBgColorOne: #8cc717;
       --buttonBgColorOneHover: #71a014;
       --buttonBgColorTwo: rgb(228, 24, 24);

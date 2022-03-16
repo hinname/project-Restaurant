@@ -42,15 +42,8 @@ export default {
                         image: this.image,
                         ingredients: this.ingredients,
                         price: this.price,
+                        totalPrice: this.price,
                         quantity: '1'
-                  },
-                  prato: {
-                        id: 1,
-                        name: "Pizza de Pepperoni",
-                        ingredients: "Muçarela, Molho de tomate, Pepperoni.",
-                        image: "http://localhost:3000/images/pepperoni.jpg",
-                        price: "R$32,50",
-                        quantity: 1
                   },
             }
       },

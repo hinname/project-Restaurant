@@ -27,7 +27,7 @@
         <div class="bottomCart">
           <div class="totalPrice">
             <p id="priceText">Valor total da cesta:</p>
-            <p id="priceOrder">{{priceCart}}</p>
+            <p id="priceCart">{{priceCart}}</p>
           </div>
         </div>
       </div>
@@ -67,7 +67,8 @@ export default {
       cartElement: {},
       notFoundCart: false,
       popUp: false,
-      priceCart: 0,
+      priceCartNum: 0,
+      priceCartStr: '0'
 
     }
   },
@@ -82,7 +83,10 @@ export default {
 
     if(!cartElements) {
       this.notFoundCart = true
+      return
     }
+
+
   },
 
   methods: {
@@ -103,10 +107,24 @@ export default {
           
         },
 
+        showTotalPriceCart() {
+          this.$store.state.cartModule.cart.forEach(dish => {
+
+            this.priceCartNum += parseFloat(dish.totalPrice)
+          })
+
+            this.priceCartStr = String("R$" + this.priceCartNum)
+            this.priceCartStr = this.priceCartStr.replace('.', ',')
+        },
+
         checkCart() {
               if(this.$store.state.cartModule.cart.length === 0) {
                 this.notFoundCart = true
+                return
               }
+
+              this.showTotalPriceCart()
+              return
         },
 
         closePopUp(){
@@ -171,7 +189,7 @@ export default {
       color: var(--darkOne);
 }
 
-#priceOrder {
+#priceCart {
       font-size: 1.2rem;
       color: var(--buttonBgColorTwo);
 }

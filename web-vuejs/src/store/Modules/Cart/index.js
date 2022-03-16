@@ -16,6 +16,10 @@ const cartModule = {
 
   mutations: {
     addDishCart(state, dish) {
+
+      dish.totalPrice = dish.totalPrice.replace(/,/g, '.')
+      dish.totalPrice = dish.totalPrice.replace('R$','')
+
       state.cart.push(dish)
     },
 
@@ -34,7 +38,16 @@ const cartModule = {
         return dish.name == Exdish.name
       })
 
-      existingDish.quantity++;
+      
+      let quantitychanged = parseInt(existingDish.quantity)
+      quantitychanged++;
+      existingDish.quantity = String(quantitychanged)
+
+      let priceReplaced = existingDish.price.replace(/,/g, '.')
+      priceReplaced = priceReplaced.replace('R$','')
+        
+      existingDish.totalPrice = parseFloat(priceReplaced) * quantitychanged
+
       return
     }
   },

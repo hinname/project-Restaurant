@@ -38,7 +38,7 @@ export default {
 
       props: {
             id: Number,
-            priceOrder: Number,
+            priceOrder: String,
       },
 
       data(){
@@ -69,7 +69,7 @@ export default {
       display: flex;
       flex-direction: row;
       padding: 1.5rem;
-      background-color: var(--buttonFontOne);
+      background-color: var(--lightFive);
       height: 75%;
       width: auto;
       justify-content: space-between;
