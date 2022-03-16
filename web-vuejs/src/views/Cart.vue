@@ -27,7 +27,7 @@
         <div class="bottomCart">
           <div class="totalPrice">
             <p id="priceText">Valor total da cesta:</p>
-            <p id="priceCart">{{priceCart}}</p>
+            <p id="priceCart">{{priceCartStr}}</p>
           </div>
         </div>
       </div>
@@ -98,7 +98,10 @@ export default {
         confirmOrder() {
 
           //const cart = this.$store.state.cartModule.cart
-          if(this.$store.dispatch('orderModule/addCartOrder', this.$store.state.cartModule.cart)) {
+          if(this.$store.dispatch('orderModule/addCartOrder', {
+            cart:this.$store.state.cartModule.cart, 
+            price:this.priceCartNum
+          })) {
             this.popUp = true
             this.$store.commit('cartModule/deleteCart')
             this.notFoundCart = true

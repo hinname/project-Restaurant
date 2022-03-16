@@ -162,6 +162,11 @@ export default {
       .dishBottom button p{
             font-size: 1.25rem;
       }
+
+      .dishImages img {
+            max-height: 30vh;
+            max-width: 50vw;
+      }
 }
 
 </style>

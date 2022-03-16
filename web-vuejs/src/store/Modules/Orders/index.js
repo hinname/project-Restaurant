@@ -25,17 +25,21 @@ const orderModule = {
   },
 
   actions: {
-    addCartOrder(context, dishes) {
+    addCartOrder(context, payload) {
       let priceOrder = 0;
 
-      dishes.forEach(dish => {
+      //dishes.forEach(dish => {
 
-        let priceReplaced = dish.price.replace(/,/g, '.')
-        priceReplaced = priceReplaced.replace('R$','')
+        //let priceReplaced = dish.price.replace(/,/g, '.')
+        //priceReplaced = priceReplaced.replace('R$','')
         
-        priceOrder += parseFloat(priceReplaced)
+        //priceOrder += parseFloat(priceReplaced)
 
-      });
+      //});
+      const dishes = payload.cart
+      const priceCart = payload.price
+
+      priceOrder = priceCart
 
       priceOrder = String("R$" + priceOrder)
       priceOrder = priceOrder.replace('.', ',')
@@ -44,6 +48,7 @@ const orderModule = {
         id: context.state.order.length + 1,
         dishes, 
         priceOrder}
+      
 
       context.commit('addOrder', order)
 
