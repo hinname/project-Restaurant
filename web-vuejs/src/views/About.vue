@@ -76,7 +76,7 @@
             
             
 
-            <div class="credits"><a href='https://www.freepik.com/vectors/background'>Background vector created by wangstdo - www.freepik.com</a></div>
+            <div class="credits"><a href='https://www.freepik.com/vectors/background' target="_blank">Background vector created by wangstdo - www.freepik.com</a></div>
            
       </div>
       

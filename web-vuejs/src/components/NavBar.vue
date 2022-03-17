@@ -77,8 +77,8 @@
                         Se Ocupada, Mostrar também o Status do Pedido (Aguardando pedido, Pedido em preparação...)-->
             </div>
             <div class="socialMediaLinks">
-                  <a href="https://www.facebook.com"><fa :icon="['fab', 'facebook']" /></a>
-                  <a href="https://www.instagram.com"><fa :icon="['fab', 'instagram']" /></a>
+                  <a href="https://www.facebook.com" target="_blank"><fa :icon="['fab', 'facebook']" /></a>
+                  <a href="https://www.instagram.com" target="_blank"><fa :icon="['fab', 'instagram']" /></a>
             </div>
       </div>
       <div id="popUpContainer">
