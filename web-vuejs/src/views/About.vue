@@ -4,18 +4,23 @@
             <h1>Sobre Nós</h1>
 
             <div class="aboutContent">
-                  <div class="leftPart">
-                        <img class="restaurantImg" src="../assets/restaurant_background_1.jpg" alt="Resaurant image" >
+                  <div class="leftPart desktop">
+                        <img class="restaurantImg" src="../assets/restaurant_background_1.jpg" alt="Resaurant image">
 
-                        <img class="restaurantImg" src="../assets/restaurant_background_2.jpg" alt="Resaurant image" >
-
+                        <img class="restaurantImg" src="../assets/restaurant_background_2.jpg" alt="Resaurant image">
                   </div>
 
                   <div class="rightPart">
                         <h2> Nosso Restaurante...</h2>
+
                         <div class="text">
+                              <img class="restaurantImg mobile" src="../assets/restaurant_background_2.jpg" alt="Resaurant image">
+
                               <p>Criada em em 1999, em Ontário, Canadá, por dois brasileiros amantes de um bom churrasco, a Cheff Hat nasceu com a missão de entregar o melhor da culinária brasileira a outros países.</p>
                               <p> Temos duas estrelas Michelin com muito orgulho e outras altas classificações por críticos ao redor do mundo, porém, mais imporante, fazemos de tudo para o cliente sair satisfeito.</p>
+
+                              <img class="restaurantImg mobile" src="../assets/restaurant_background_1.jpg" alt="Resaurant image">
+
 
                               <p>Chegamos também no Brasil, operamos em quatro dos maiores bairros do Rio de Janeiro e em três locais em São Paulo</p>
                         </div>
@@ -29,31 +34,38 @@
 
             <div class="contactInfo">
                   <div class="email">
+                        <h3>E-mail</h3>
                         <p>thecheffhat@hotmail.com</p>
                         <p>ocheffhatbr@outlook.com</p>
-                        </div>
+                        <p>ocheffhatcarioca@gmail.com</p>
+                        <p>ocheffhatsp@yahoo.com.br</p>
+                  </div>
                   
                   <div class="phone">
+                        <h3>Telefones</h3>
                         <p>21 33411-4544</p>
                         <p>21 32415-2525</p>
                         <p>21 31988-8433</p>
                         <p>21 33919-4554</p>
                         <p>11 39835-4398</p>
-                        <p>11 2885-5944</p>
+                        <p>11 28855-5944</p>
                         <p>11 33015-5660</p>
                   </div>
 
-                  <div class="enderecos">
-                        <h3>RJ</h3>
+                  <div class="adress">
+                        <h3>Endereços</h3>
                         <div class="rj">
+                              <h4>RJ</h4>
+
                               <p>Largo da Lapa, Centro - 		20021-170</p>
                               <p>Park Shopping, Campo Grande - 23045-830</p>
                               <p>Barra Shopping, Barra da Tijuca - 22640-102</p>
                               <p>Av. Maracanã, Maracanã - 20511-000</p>
                         </div>
                               
-                        <h3>SP</h3>
                         <div class="sp">
+                              <h4>SP</h4>
+
                                <p>Jardim Helena - 08090-284</p>
                               <p>13 de Maio - 04849-529</p>
                               <p>Brás - 03047-000</p>
@@ -77,6 +89,10 @@ export default {
 </script>
 
 <style scoped>
+.mobile{
+      display: none;
+}
+
 .container {
       position: relative;
       display: flex;
@@ -110,28 +126,32 @@ export default {
 .aboutContent{
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      padding: 0;
+      padding: 0 0 0 0.2rem;
+      margin-bottom: 2rem;
+
 }
 
 .leftPart{
       display: flex;
       flex-direction: column;
       float: left;
-      padding: 0 0 0 0.2rem;
       gap: 1px;
       width: 100%;
       background-color: gray;
+      padding: 0;
 }
 
 .rightPart{
       display: flex;
       flex-direction: column;
-      gap:8rem;
+      gap:4rem;
       align-self:center;
+      padding: 0 2rem 0 0;
 }
 
 .rightPart h2{
       font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-style: italic;
 }
 
 .rightPart .text{
@@ -146,7 +166,66 @@ export default {
       text-indent: 2rem;
 }
 
+.contactInfo{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.contactInfo p, .contactInfo h3, .contactInfo h4, .contactInfo div{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+}
+
+.contactInfo h3{
+      margin-bottom: 1rem;
+}
+
+
+.email, .phone, .adress{
+      display: flex;
+      flex-direction: column;
+      gap:1rem;
+}
+
+.email p{
+      color:black;
+      cursor: pointer;
+}
+
+.adress{
+      gap:0.5rem;
+      padding-right: 3rem;
+}
+
+.adress > *{
+      display: flex;
+      flex-direction: column;
+}
+
+.adress h4{
+      margin-bottom: 0.25rem;
+}
+
+.adress p {
+      font-size: 1rem;
+      text-align: left;
+}
+
+.sp, .rj{
+      gap:0.5rem;
+      margin-bottom: 0.75rem !important;
+}
+
 @media screen and (max-width: 480px){
+      .mobile{
+            display: flex;
+      }
+
+      .desktop{
+            display: none;
+      }
+
       .container{
             left: 0;
             width: 100%;
@@ -160,6 +239,37 @@ export default {
 
       .aboutContent{
             grid-template-columns: none;
+            padding: 0;
+      }
+
+      .rightPart{
+            gap: 2rem;
+      }
+
+      .rightPart *{
+            padding: 0;
+      }
+
+      .rightPart img{
+            width: 100vw;
+            margin: 0;
+            border-radius:0;
+            margin: 2rem 0 0.75rem 0;
+      }
+
+      .rightPart .text{
+            gap: 0.75rem;
+      }
+
+      .contactInfo{
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      }
+
+      .contactInfo > div{
+            border-bottom: 2px solid rgb(180, 178, 178);
+            padding-bottom: 1rem;
       }
 
       .credits{
