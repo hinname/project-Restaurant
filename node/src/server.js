@@ -6,5 +6,5 @@ const port = process.env.PORT || 3000;
 
 // Server setup
 app.listen(port, () => {
-  console.log(`Running server on PORT ${PORT}...`);
+  console.log(`Running server on PORT ${port}...`);
 })
