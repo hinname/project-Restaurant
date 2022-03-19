@@ -43,13 +43,13 @@
                   
                   <div class="phone">
                         <h3>Telefones</h3>
-                        <p>21 33411-4544</p>
-                        <p>21 32415-2525</p>
-                        <p>21 31988-8433</p>
-                        <p>21 33919-4554</p>
-                        <p>11 39835-4398</p>
-                        <p>11 28855-5944</p>
-                        <p>11 33015-5660</p>
+                        <p>21 10000-0000</p>
+                        <p>21 20000-0000</p>
+                        <p>21 30000-0000</p>
+                        <p>21 40000-0000</p>
+                        <p>11 30000-0000</p>
+                        <p>11 30000-0000</p>
+                        <p>11 30000-0000</p>
                   </div>
 
                   <div class="adress">
@@ -57,26 +57,23 @@
                         <div class="rj">
                               <h4>RJ</h4>
 
-                              <p>Largo da Lapa, Centro - 		20021-170</p>
-                              <p>Park Shopping, Campo Grande - 23045-830</p>
-                              <p>Barra Shopping, Barra da Tijuca - 22640-102</p>
-                              <p>Av. Maracanã, Maracanã - 20511-000</p>
+                              <p>Largo da Lapa, Centro - 		10001-000</p>
+                              <p>Park Shopping, Campo Grande - 20002-000</p>
+                              <p>Barra Shopping, Barra da Tijuca - 30003-000</p>
+                              <p>Av. Maracanã, Maracanã - 40004-000</p>
                         </div>
                               
                         <div class="sp">
                               <h4>SP</h4>
 
-                               <p>Jardim Helena - 08090-284</p>
-                              <p>13 de Maio - 04849-529</p>
-                              <p>Brás - 03047-000</p>
+                               <p>Jardim Helena - 10000-000</p>
+                              <p>13 de Maio - 20000-000</p>
+                              <p>Brás - 30000-000</p>
                         </div>
                   </div>
             </div>
             
-            
-            
 
-            <div class="credits"><a href='https://www.freepik.com/vectors/background' target="_blank">Background vector created by wangstdo - www.freepik.com</a></div>
            
       </div>
       
