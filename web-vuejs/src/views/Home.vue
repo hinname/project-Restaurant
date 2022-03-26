@@ -45,6 +45,10 @@
             :price="dish.preco"
           />
       </div>
+
+      <div class="nav-space">
+        <span></span>
+      </div>
     </div>
 </template>
 
@@ -240,6 +244,10 @@ export default {
       .go-cart{
         margin-top: 1.5rem;
       }
+
+        .nav-space {
+        height: 12vh;
+    }
 }
 
 </style>

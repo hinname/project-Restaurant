@@ -132,9 +132,8 @@ export default {
       display: flex;
       flex-direction: column;
       float: left;
-      gap: 1px;
+      gap: 1rem;
       width: 100%;
-      background-color: gray;
       padding: 0;
 }
 

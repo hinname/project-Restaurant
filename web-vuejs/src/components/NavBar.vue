@@ -102,6 +102,20 @@ export default {
             MostReq, Promotions
       },
 
+      created() {
+
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+
+            window.addEventListener('resize', () => {
+
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+            });
+      },
+
       methods:{
             mostReq(){
                   //Se já tiver um popupAtivo
@@ -249,6 +263,8 @@ export default {
       width: 100vw;
       height: 12vh;
       top: 88vh;
+      height: calc(var(--vh, 1vh) * 12);
+      top: calc(var(--vh, 1vh) * 88);
 }
 
 .bigLogo{
