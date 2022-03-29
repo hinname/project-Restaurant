@@ -11,4 +11,11 @@ O projeto surgiu durante a disciplina de modelagem de sistema utilizando UML, co
 - Instale nodejs (Se não tiver) : https://nodejs.org/en/
 - Instale o vue-cli : https://cli.vuejs.org/guide/installation.html
 - Baixe ou clone o project-Restaurant
-- Acesse 
+### Iniciando a API node
+- Acesse a pasta node pelo console (cmd ou powershell)
+- digite o comando "**npm install**" para que todas as dependências do projeto sejam instaladas
+- digite o comando "**npm run dev**" para que inciar a API
+### Iniciando a Aplicação vue
+- Acesse a pasta web-vuejs pelo console (cmd ou powershell)
+- digite o comando "**npm install**" para que todas as dependências do projeto sejam instaladas
+- digite o comando "**npm run serve**" para que inciar a aplicação vue
