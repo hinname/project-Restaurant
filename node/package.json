@@ -9,10 +9,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-
   "dependencies": {
     "express": "^4.17.2",
     "node": "^17.3.0",
-    "serve-index": "^1.9.1"
+    "serve-index": "^1.9.1",
+    "yarn": "^1.22.19"
   }
 }

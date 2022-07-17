@@ -125,7 +125,7 @@ export default {
                 this.notFoundCart = true
                 return
               }
-
+              this.priceCartNum = 0
               this.showTotalPriceCart()
               return
         },
